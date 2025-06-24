@@ -69,7 +69,7 @@ const Contacts = () => {
               <div className="space-y-3 text-sm">
                 <div>
                   <span className="font-medium"></span>
-                  <span className="text-gray-600 ml-2">+7 (812) 123-45-67</span>
+                  <span className="text-gray-600 ml-2"></span>
                 </div>
                 <div>
                   <span className="font-medium">Нижний Новгород:</span>
