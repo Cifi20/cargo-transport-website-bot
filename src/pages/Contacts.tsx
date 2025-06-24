@@ -68,7 +68,7 @@ const Contacts = () => {
               <h3 className="font-semibold text-gray-900 mb-4"></h3>
               <div className="space-y-3 text-sm">
                 <div>
-                  <span className="font-medium">Санкт-Петербург:</span>
+                  <span className="font-medium"></span>
                   <span className="text-gray-600 ml-2">+7 (812) 123-45-67</span>
                 </div>
                 <div>
