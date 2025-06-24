@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Rates from "./pages/Rates";
-import Calculator from "./pages/Calculator";
+import Calculator from "./components/Calculator";
 import FAQ from "./pages/FAQ";
 import Tracking from "./pages/Tracking";
 import Reviews from "./pages/Reviews";
