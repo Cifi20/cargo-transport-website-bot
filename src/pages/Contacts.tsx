@@ -65,9 +65,7 @@ const Contacts = () => {
             </div>
 
             <div className="bg-blue-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-4">
-                Филиалы в регионах
-              </h3>
+              <h3 className="font-semibold text-gray-900 mb-4"></h3>
               <div className="space-y-3 text-sm">
                 <div>
                   <span className="font-medium">Санкт-Петербург:</span>
