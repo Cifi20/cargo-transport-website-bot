@@ -130,6 +130,74 @@ const Rates = () => {
             </div>
           </div>
         </div>
+
+        <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+            Почасовая аренда грузовиков
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {[
+              { tonnage: "1.5т", icon: "🚐", price4h: "2400", price8h: "4000" },
+              { tonnage: "3т", icon: "🚚", price4h: "3200", price8h: "5600" },
+              { tonnage: "5т", icon: "🚛", price4h: "4000", price8h: "7200" },
+              { tonnage: "10т", icon: "🚜", price4h: "6000", price8h: "11200" },
+              { tonnage: "15т", icon: "🚛", price4h: "8000", price8h: "15200" },
+              {
+                tonnage: "20т",
+                icon: "🚚",
+                price4h: "10000",
+                price8h: "19200",
+              },
+            ].map((truck, index) => (
+              <div
+                key={index}
+                className="text-center bg-gray-50 p-6 rounded-lg"
+              >
+                <div className="text-4xl mb-3">{truck.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                  {truck.tonnage}
+                </h3>
+                <div className="space-y-2">
+                  <div className="bg-white p-2 rounded">
+                    <div className="text-sm text-gray-600">4 часа</div>
+                    <div className="font-semibold text-blue-600">
+                      {truck.price4h} ₽
+                    </div>
+                  </div>
+                  <div className="bg-white p-2 rounded">
+                    <div className="text-sm text-gray-600">8 часов</div>
+                    <div className="font-semibold text-green-600">
+                      {truck.price8h} ₽
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-orange-50 border border-orange-200 rounded-lg p-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              🛣️ Выезд за МКАД
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-2">До 10 км</div>
+                <div className="text-orange-600 font-bold">+500 ₽</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-2">10-30 км</div>
+                <div className="text-orange-600 font-bold">+1200 ₽</div>
+              </div>
+              <div className="bg-white p-4 rounded-lg">
+                <div className="font-semibold text-gray-900 mb-2">
+                  Свыше 30 км
+                </div>
+                <div className="text-orange-600 font-bold">+50 ₽/км</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   );
