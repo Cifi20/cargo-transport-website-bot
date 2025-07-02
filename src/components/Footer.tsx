@@ -1,4 +1,4 @@
-import { Truck, Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Truck, Phone, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -50,7 +50,6 @@ const Footer = () => {
               <li>Перевозка мебели</li>
               <li>Стройматериалы</li>
               <li>Оборудование</li>
-              <li>Калькулятор стоимости</li>
             </ul>
           </div>
 
@@ -61,7 +60,7 @@ const Footer = () => {
               <li>О компании</li>
               <li>Тарифы</li>
               <li>Часто задаваемые вопросы</li>
-              <li>Отслеживание груза</li>
+
               <li>Отзывы клиентов</li>
               <li>Политика конфиденциальности</li>
             </ul>
@@ -79,10 +78,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5 text-orange-500" />
                 <span>cargo6705@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-orange-500" />
-                <span>г. Москва, ул. Логистическая, 15</span>
-              </div>
+
               <div className="flex items-center space-x-3">
                 <Clock className="h-5 w-5 text-orange-500" />
                 <span>Работаем 24/7</span>
