@@ -103,6 +103,7 @@ const App = () => {
         <div className="bg-white">
           <Header />
           <Hero />
+          <OrderForm />
           <Advantages />
 
           {/* About Section */}
@@ -310,7 +311,6 @@ const App = () => {
             </div>
           </section>
 
-          <OrderForm />
           <Footer />
           <ChatBot />
         </div>

@@ -18,6 +18,8 @@ const OrderForm = () => {
     carType: "",
     loaders: "",
     date: "",
+    needHydroboard: "",
+    needRokla: "",
   });
 
   const formatPhoneNumber = (value: string) => {
@@ -127,6 +129,7 @@ const OrderForm = () => {
                       <SelectValue placeholder="Выберите тип автомобиля" />
                     </SelectTrigger>
                     <SelectContent>
+                      <SelectItem value="0.5">Каблук 0.5т</SelectItem>
                       <SelectItem value="1.5">Газель 1.5т</SelectItem>
                       <SelectItem value="3">Грузовик 3т</SelectItem>
                       <SelectItem value="5">Грузовик 5т</SelectItem>
@@ -150,6 +153,38 @@ const OrderForm = () => {
                       <SelectItem value="2">2 грузчика</SelectItem>
                       <SelectItem value="3">3 грузчика</SelectItem>
                       <SelectItem value="4">4 грузчика</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="mb-4">
+                  <Label htmlFor="hydroboard">Нужен ли гидроборт?</Label>
+                  <Select
+                    onValueChange={(value) =>
+                      handleInputChange("needHydroboard", value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите вариант" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="no">Не требуется</SelectItem>
+                      <SelectItem value="yes">Требуется</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div className="mb-4">
+                  <Label htmlFor="rokla">Нужна ли рокла?</Label>
+                  <Select
+                    onValueChange={(value) =>
+                      handleInputChange("needRokla", value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите вариант" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="no">Не требуется</SelectItem>
+                      <SelectItem value="yes">Требуется</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
