@@ -26,9 +26,77 @@ const ReviewForm = ({ onReviewSubmit }: ReviewFormProps) => {
     rating: "",
     comment: "",
   });
+  const [selectedImages, setSelectedImages] = useState<File[]>([]);
+  const [selectedVideos, setSelectedVideos] = useState<File[]>([]);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+  const [videoUrls, setVideoUrls] = useState<string[]>([]);
 
   const handleInputChange = (field: string, value: string) => {
     setFormData({ ...formData, [field]: value });
+  };
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    const validImages = files.filter((file) => file.type.startsWith("image/"));
+
+    if (validImages.length !== files.length) {
+      toast({
+        title: "Неверный формат",
+        description: "Выберите только изображения",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSelectedImages((prev) => [...prev, ...validImages].slice(0, 5));
+
+    // Создаем URL для предпросмотра
+    validImages.forEach((file) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setImageUrls((prev) =>
+          [...prev, e.target?.result as string].slice(0, 5),
+        );
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    const validVideos = files.filter((file) => file.type.startsWith("video/"));
+
+    if (validVideos.length !== files.length) {
+      toast({
+        title: "Неверный формат",
+        description: "Выберите только видео",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setSelectedVideos((prev) => [...prev, ...validVideos].slice(0, 3));
+
+    // Создаем URL для предпросмотра
+    validVideos.forEach((file) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setVideoUrls((prev) =>
+          [...prev, e.target?.result as string].slice(0, 3),
+        );
+      };
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const removeImage = (index: number) => {
+    setSelectedImages((prev) => prev.filter((_, i) => i !== index));
+    setImageUrls((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const removeVideo = (index: number) => {
+    setSelectedVideos((prev) => prev.filter((_, i) => i !== index));
+    setVideoUrls((prev) => prev.filter((_, i) => i !== index));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -58,6 +126,8 @@ const ReviewForm = ({ onReviewSubmit }: ReviewFormProps) => {
         rating: parseInt(formData.rating),
         comment: formData.comment,
         date: new Date().toLocaleDateString("ru-RU"),
+        images: imageUrls.length > 0 ? imageUrls : undefined,
+        videos: videoUrls.length > 0 ? videoUrls : undefined,
       };
 
       onReviewSubmit(newReview);
@@ -74,6 +144,10 @@ const ReviewForm = ({ onReviewSubmit }: ReviewFormProps) => {
         rating: "",
         comment: "",
       });
+      setSelectedImages([]);
+      setSelectedVideos([]);
+      setImageUrls([]);
+      setVideoUrls([]);
     } catch (error) {
       toast({
         title: "Ошибка отправки",
@@ -92,7 +166,7 @@ const ReviewForm = ({ onReviewSubmit }: ReviewFormProps) => {
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4">Оставить отзыв</h2>
             <p className="text-gray-600">
-              Поделитесь своим мнением о наших услугах
+              Поделитесь своим мнением о наших услугах. Добавьте фото или видео!
             </p>
           </div>
 
@@ -157,6 +231,83 @@ const ReviewForm = ({ onReviewSubmit }: ReviewFormProps) => {
                   value={formData.comment}
                   onChange={(e) => handleInputChange("comment", e.target.value)}
                 />
+              </div>
+
+              {/* Загрузка фотографий */}
+              <div className="space-y-2">
+                <Label htmlFor="images">Фотографии (до 5 шт.)</Label>
+                <div className="flex items-center space-x-4">
+                  <Input
+                    id="images"
+                    type="file"
+                    multiple
+                    accept="image/*"
+                    onChange={handleImageChange}
+                    className="flex-1"
+                    disabled={selectedImages.length >= 5}
+                  />
+                  <Icon name="Camera" size={20} className="text-gray-400" />
+                </div>
+                {imageUrls.length > 0 && (
+                  <div className="grid grid-cols-3 gap-2 mt-2">
+                    {imageUrls.map((url, index) => (
+                      <div key={index} className="relative">
+                        <img
+                          src={url}
+                          alt={`Preview ${index + 1}`}
+                          className="w-full h-20 object-cover rounded border"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => removeImage(index)}
+                          className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Загрузка видео */}
+              <div className="space-y-2">
+                <Label htmlFor="videos">Видео (до 3 шт.)</Label>
+                <div className="flex items-center space-x-4">
+                  <Input
+                    id="videos"
+                    type="file"
+                    multiple
+                    accept="video/*"
+                    onChange={handleVideoChange}
+                    className="flex-1"
+                    disabled={selectedVideos.length >= 3}
+                  />
+                  <Icon name="Video" size={20} className="text-gray-400" />
+                </div>
+                {videoUrls.length > 0 && (
+                  <div className="grid grid-cols-2 gap-2 mt-2">
+                    {videoUrls.map((url, index) => (
+                      <div key={index} className="relative">
+                        <video
+                          src={url}
+                          className="w-full h-24 object-cover rounded border"
+                          controls={false}
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded">
+                          <Icon name="Play" size={16} className="text-white" />
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => removeVideo(index)}
+                          className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
 
               <Button type="submit" className="w-full" disabled={isSubmitting}>

@@ -7,6 +7,8 @@ export interface Review {
   rating: number;
   comment: string;
   date: string;
+  images?: string[];
+  videos?: string[];
 }
 
 const STORAGE_KEY = "user_reviews";

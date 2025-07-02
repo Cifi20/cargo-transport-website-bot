@@ -252,6 +252,63 @@ const App = () => {
                         {review.comment}
                       </p>
                     </div>
+
+                    {/* Медиа контент */}
+                    {(review.images || review.videos) && (
+                      <div className="mt-4 space-y-3">
+                        {/* Фотографии */}
+                        {review.images && review.images.length > 0 && (
+                          <div className="grid grid-cols-2 gap-2">
+                            {review.images
+                              .slice(0, 4)
+                              .map((image, imgIndex) => (
+                                <div key={imgIndex} className="relative">
+                                  <img
+                                    src={image}
+                                    alt={`Фото от ${review.name} ${imgIndex + 1}`}
+                                    className="w-full h-20 object-cover rounded border hover:opacity-90 cursor-pointer transition-opacity"
+                                    onClick={() => window.open(image, "_blank")}
+                                  />
+                                  {imgIndex === 3 &&
+                                    review.images &&
+                                    review.images.length > 4 && (
+                                      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center rounded text-white text-sm font-semibold">
+                                        +{review.images.length - 4}
+                                      </div>
+                                    )}
+                                </div>
+                              ))}
+                          </div>
+                        )}
+
+                        {/* Видео */}
+                        {review.videos && review.videos.length > 0 && (
+                          <div className="grid grid-cols-1 gap-2">
+                            {review.videos
+                              .slice(0, 2)
+                              .map((video, vidIndex) => (
+                                <div key={vidIndex} className="relative">
+                                  <video
+                                    className="w-full h-32 object-cover rounded border"
+                                    controls
+                                    preload="metadata"
+                                  >
+                                    <source src={video} />
+                                    Ваш браузер не поддерживает видео.
+                                  </video>
+                                  {vidIndex === 1 &&
+                                    review.videos &&
+                                    review.videos.length > 2 && (
+                                      <div className="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded">
+                                        +{review.videos.length - 2}
+                                      </div>
+                                    )}
+                                </div>
+                              ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
