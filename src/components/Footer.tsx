@@ -19,7 +19,9 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://vk.com/cargo_rf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
@@ -27,19 +29,13 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="#"
+                href="https://t.me/cargo_rf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
               >
                 <div className="w-8 h-8 bg-blue-400 rounded-full flex items-center justify-center">
                   <span className="text-sm font-bold">TG</span>
-                </div>
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">YT</span>
                 </div>
               </a>
             </div>
@@ -49,54 +45,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Услуги</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Городские перевозки
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Междугородние перевозки
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Перевозка мебели
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Стройматериалы
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Оборудование
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#calculator"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Калькулятор стоимости
-                </a>
-              </li>
+              <li>Городские перевозки</li>
+              <li>Междугородние перевозки</li>
+              <li>Перевозка мебели</li>
+              <li>Стройматериалы</li>
+              <li>Оборудование</li>
+              <li>Калькулятор стоимости</li>
             </ul>
           </div>
 
@@ -104,54 +58,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Информация</h3>
             <ul className="space-y-2 text-gray-400">
-              <li>
-                <a
-                  href="#about"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  О компании
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#tariffs"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Тарифы
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Часто задаваемые вопросы
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#tracking"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Отслеживание груза
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#reviews"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Отзывы клиентов
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  Политика конфиденциальности
-                </a>
-              </li>
+              <li>О компании</li>
+              <li>Тарифы</li>
+              <li>Часто задаваемые вопросы</li>
+              <li>Отслеживание груза</li>
+              <li>Отзывы клиентов</li>
+              <li>Политика конфиденциальности</li>
             </ul>
           </div>
 
