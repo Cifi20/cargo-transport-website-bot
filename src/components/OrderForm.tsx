@@ -80,7 +80,7 @@ const OrderForm = () => {
                   </div>
                   <div>
                     <h3 className="font-medium">Email</h3>
-                    <p>info@gruzoperevozki.ru</p>
+                    <p>cargo6705@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start">
