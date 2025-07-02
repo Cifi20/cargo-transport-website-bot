@@ -27,7 +27,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 5т",
       image:
-        "https://readdy.ai/api/search-image?query=Medium%20cargo%20truck%205%20ton%20capacity%2C%20white%20commercial%20vehicle%2C%20side%20profile%20view%2C%20professional%20truck%20photography%2C%20clean%20background%2C%20high%20quality&width=600&height=400&seq=8&orientation=landscape",
+        "https://cdn.poehali.dev/files/956441e2-6ad9-4ded-9c7d-cfbcf7553453.jpg",
       capacity: "до 5 тонн",
       dimensions: "5×2.2×2.2 м",
       pallets: "14 паллет",
