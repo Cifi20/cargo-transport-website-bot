@@ -50,7 +50,7 @@ const TariffSection = () => {
     {
       title: "Фура 20т",
       image:
-        "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
+        "https://cdn.poehali.dev/files/b76a8ada-5ac8-427c-a624-58ffa0fdc6b6.png",
       capacity: "до 20 тонн",
       dimensions: "13.6×2.45×2.45 м",
       pallets: "33 паллета",
