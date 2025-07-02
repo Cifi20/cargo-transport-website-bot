@@ -10,17 +10,7 @@ import LoaderServices from "@/components/LoaderServices";
 import OrderForm from "@/components/OrderForm";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
-import {
-  Truck,
-  Package,
-  Clock,
-  Shield,
-  Users,
-  Target,
-  Award,
-  Star,
-  Quote,
-} from "lucide-react";
+import { Truck, Clock, Users, Target, Award, Star, Quote } from "lucide-react";
 
 const queryClient = new QueryClient();
 
@@ -32,23 +22,12 @@ const App = () => {
       description: "Доставка грузов любого объема по России и СНГ",
       features: ["До 20 тонн", "Срочная доставка", "Страхование"],
     },
-    {
-      icon: <Package className="h-12 w-12 text-orange-500" />,
-      title: "Складские услуги",
-      description: "Современные склады с системой контроля температуры",
-      features: ["Краткосрочное хранение", "Упаковка", "Сортировка"],
-    },
+
     {
       icon: <Clock className="h-12 w-12 text-green-600" />,
       title: "Экспресс-доставка",
       description: "Быстрая доставка в течение 24 часов",
       features: ["Курьерская доставка", "Документы", "Малогабарит"],
-    },
-    {
-      icon: <Shield className="h-12 w-12 text-purple-600" />,
-      title: "Специальные перевозки",
-      description: "Перевозка негабаритных и опасных грузов",
-      features: ["Спецтехника", "Сопровождение", "Разрешения"],
     },
   ];
 
