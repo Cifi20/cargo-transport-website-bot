@@ -10,8 +10,12 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { sendToTelegram } from "@/lib/telegram";
+import { useToast } from "@/hooks/use-toast";
 
 const OrderForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -50,9 +54,55 @@ const OrderForm = () => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+
+    if (!formData.name || !formData.phone) {
+      toast({
+        title: "Ошибка",
+        description: "Пожалуйста, заполните имя и телефон",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const success = await sendToTelegram(formData);
+
+      if (success) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Мы свяжемся с вами в ближайшее время",
+        });
+
+        // Очищаем форму
+        setFormData({
+          name: "",
+          phone: "",
+          carType: "",
+          loaders: "",
+          date: "",
+          needHydroboard: "",
+          needRokla: "",
+        });
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: "Попробуйте еще раз или позвоните нам",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка отправки",
+        description: "Попробуйте еще раз или позвоните нам",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -197,8 +247,12 @@ const OrderForm = () => {
                     onChange={(e) => handleInputChange("date", e.target.value)}
                   />
                 </div>
-                <Button type="submit" className="w-full">
-                  Отправить заявку
+                <Button
+                  type="submit"
+                  className="w-full"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Отправляем..." : "Отправить заявку"}
                 </Button>
               </form>
             </div>
