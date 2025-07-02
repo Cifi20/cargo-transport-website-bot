@@ -27,10 +27,11 @@ const TariffSection = () => {
     {
       title: "Грузовик 5т",
       image:
-        "https://readdy.ai/api/search-image?query=Medium%20cargo%20truck%205%20ton%2C%20white%20color%2C%20side%20view%2C%20clean%20simple%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image&width=600&height=400&seq=3&orientation=landscape",
+        "https://readdy.ai/api/search-image?query=Medium%20cargo%20truck%205%20ton%20capacity%2C%20white%20commercial%20vehicle%2C%20side%20profile%20view%2C%20professional%20truck%20photography%2C%20clean%20background%2C%20high%20quality&width=600&height=400&seq=8&orientation=landscape",
       capacity: "до 5 тонн",
       dimensions: "5×2.2×2.2 м",
       pallets: "14 паллет",
+      volume: "40 м³",
       minTime: "3 часа",
       price: "от 1200 ₽/час",
       mkadPrice: "40 ₽/км",
@@ -99,6 +100,14 @@ const TariffSection = () => {
                     </div>
                     <span>Вместимость: {truck.pallets}</span>
                   </li>
+                  {truck.volume && (
+                    <li className="flex items-start">
+                      <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                        <Icon name="Box" size={16} className="text-primary" />
+                      </div>
+                      <span>Объем: {truck.volume}</span>
+                    </li>
+                  )}
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
                       <Icon name="Clock" size={16} className="text-primary" />
