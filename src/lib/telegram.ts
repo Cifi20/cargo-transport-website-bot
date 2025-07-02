@@ -4,8 +4,6 @@ interface OrderData {
   carType: string;
   loaders: string;
   date: string;
-  needHydroboard: string;
-  needRokla: string;
 }
 
 export const sendToTelegram = async (
@@ -20,8 +18,7 @@ export const sendToTelegram = async (
 🚛 *Тип автомобиля:* ${getCarTypeName(orderData.carType)}
 👷 *Грузчики:* ${getLoadersText(orderData.loaders)}
 📅 *Дата и время:* ${formatDate(orderData.date)}
-🏗️ *Гидроборт:* ${orderData.needHydroboard === "yes" ? "Требуется" : "Не требуется"}
-📦 *Рокла:* ${orderData.needRokla === "yes" ? "Требуется" : "Не требуется"}
+
 
 _Заявка отправлена с сайта_`;
 

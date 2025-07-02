@@ -22,8 +22,6 @@ const OrderForm = () => {
     carType: "",
     loaders: "",
     date: "",
-    needHydroboard: "",
-    needRokla: "",
   });
 
   const formatPhoneNumber = (value: string) => {
@@ -84,8 +82,6 @@ const OrderForm = () => {
           carType: "",
           loaders: "",
           date: "",
-          needHydroboard: "",
-          needRokla: "",
         });
       } else {
         toast({
