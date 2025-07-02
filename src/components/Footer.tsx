@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="https://t.me/cargo_rf"
+                href="https://t.me/Smartmove6705"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-200"
