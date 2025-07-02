@@ -16,7 +16,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 3т",
       image:
-        "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
+        "https://cdn.poehali.dev/files/6a6a8d7f-f17d-44dd-a544-ad3f42517bca.png",
       capacity: "до 3 тонн",
       dimensions: "4×1.8×1.8 м",
       pallets: "8 паллет",
