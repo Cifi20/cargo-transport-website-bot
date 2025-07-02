@@ -24,6 +24,13 @@ const OrderForm = () => {
     date: "",
     needHydroboard: "",
     needRokla: "",
+    cargoType: "",
+    cargoQuantity: "",
+    cargoWeight: "",
+    loadingAddress: "",
+    unloadingAddress: "",
+    loadingFloor: "",
+    unloadingFloor: "",
   });
 
   const formatPhoneNumber = (value: string) => {
@@ -86,6 +93,13 @@ const OrderForm = () => {
           date: "",
           needHydroboard: "",
           needRokla: "",
+          cargoType: "",
+          cargoQuantity: "",
+          cargoWeight: "",
+          loadingAddress: "",
+          unloadingAddress: "",
+          loadingFloor: "",
+          unloadingFloor: "",
         });
       } else {
         toast({
@@ -230,6 +244,142 @@ const OrderForm = () => {
                     </SelectContent>
                   </Select>
                 </div>
+
+                {/* Информация о грузе */}
+                <div className="mb-4">
+                  <Label htmlFor="cargoType">Тип груза</Label>
+                  <Select
+                    onValueChange={(value) =>
+                      handleInputChange("cargoType", value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите тип груза" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="furniture">Мебель</SelectItem>
+                      <SelectItem value="appliances">
+                        Бытовая техника
+                      </SelectItem>
+                      <SelectItem value="construction">
+                        Стройматериалы
+                      </SelectItem>
+                      <SelectItem value="food">Продукты питания</SelectItem>
+                      <SelectItem value="documents">Документы</SelectItem>
+                      <SelectItem value="equipment">Оборудование</SelectItem>
+                      <SelectItem value="personal">Личные вещи</SelectItem>
+                      <SelectItem value="other">Другое</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="mb-4">
+                  <Label htmlFor="cargoQuantity">Количество груза</Label>
+                  <Input
+                    id="cargoQuantity"
+                    type="text"
+                    placeholder="Например: 5 коробок, 1 диван, 20 паллет"
+                    value={formData.cargoQuantity}
+                    onChange={(e) =>
+                      handleInputChange("cargoQuantity", e.target.value)
+                    }
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <Label htmlFor="cargoWeight">Примерный вес груза (кг)</Label>
+                  <Input
+                    id="cargoWeight"
+                    type="number"
+                    placeholder="Введите вес в килограммах"
+                    value={formData.cargoWeight}
+                    onChange={(e) =>
+                      handleInputChange("cargoWeight", e.target.value)
+                    }
+                  />
+                </div>
+
+                {/* Адреса */}
+                <div className="mb-4">
+                  <Label htmlFor="loadingAddress">Адрес загрузки</Label>
+                  <Input
+                    id="loadingAddress"
+                    type="text"
+                    placeholder="Улица, дом, квартира/офис"
+                    value={formData.loadingAddress}
+                    onChange={(e) =>
+                      handleInputChange("loadingAddress", e.target.value)
+                    }
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <Label htmlFor="loadingFloor">
+                    Этаж загрузки / Есть ли лифт?
+                  </Label>
+                  <Select
+                    onValueChange={(value) =>
+                      handleInputChange("loadingFloor", value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите условия загрузки" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="ground">1 этаж / Земля</SelectItem>
+                      <SelectItem value="elevator">
+                        Высокий этаж + лифт
+                      </SelectItem>
+                      <SelectItem value="stairs-2">2 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-3">3 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-4">4 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-5plus">
+                        5+ этаж без лифта
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="mb-4">
+                  <Label htmlFor="unloadingAddress">Адрес выгрузки</Label>
+                  <Input
+                    id="unloadingAddress"
+                    type="text"
+                    placeholder="Улица, дом, квартира/офис"
+                    value={formData.unloadingAddress}
+                    onChange={(e) =>
+                      handleInputChange("unloadingAddress", e.target.value)
+                    }
+                  />
+                </div>
+
+                <div className="mb-4">
+                  <Label htmlFor="unloadingFloor">
+                    Этаж выгрузки / Есть ли лифт?
+                  </Label>
+                  <Select
+                    onValueChange={(value) =>
+                      handleInputChange("unloadingFloor", value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Выберите условия выгрузки" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="ground">1 этаж / Земля</SelectItem>
+                      <SelectItem value="elevator">
+                        Высокий этаж + лифт
+                      </SelectItem>
+                      <SelectItem value="stairs-2">2 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-3">3 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-4">4 этаж без лифта</SelectItem>
+                      <SelectItem value="stairs-5plus">
+                        5+ этаж без лифта
+                      </SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
                 <div className="mb-6">
                   <Label htmlFor="date">Дата и время</Label>
                   <Input
