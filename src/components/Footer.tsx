@@ -56,14 +56,7 @@ const Footer = () => {
           {/* Информация */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Информация</h3>
-            <ul className="space-y-2 text-gray-400">
-              <li>О компании</li>
-              <li>Тарифы</li>
-              <li>Часто задаваемые вопросы</li>
-
-              <li>Отзывы клиентов</li>
-              <li>Политика конфиденциальности</li>
-            </ul>
+            <ul className="space-y-2 text-gray-400"></ul>
           </div>
 
           {/* Контакты */}
