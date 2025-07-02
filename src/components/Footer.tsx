@@ -55,7 +55,7 @@ const Footer = () => {
 
           {/* Информация */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Информация</h3>
+            <h3 className="text-lg font-semibold mb-4"></h3>
             <ul className="space-y-2 text-gray-400"></ul>
           </div>
 
