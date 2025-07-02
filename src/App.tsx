@@ -8,13 +8,24 @@ import Advantages from "@/components/Advantages";
 import TariffSection from "@/components/TariffSection";
 import LoaderServices from "@/components/LoaderServices";
 import OrderForm from "@/components/OrderForm";
+import ReviewForm from "@/components/ReviewForm";
 import Footer from "@/components/Footer";
 import ChatBot from "@/components/ChatBot";
+import { useReviews } from "@/hooks/useReviews";
+import { useState } from "react";
 import { Truck, Clock, Users, Target, Award, Star, Quote } from "lucide-react";
 
 const queryClient = new QueryClient();
 
 const App = () => {
+  const { reviews, addReview, getAverageRating, totalReviews } = useReviews();
+  const [showReviewForm, setShowReviewForm] = useState(false);
+
+  const handleReviewSubmit = (review: any) => {
+    addReview(review);
+    setShowReviewForm(false);
+  };
+
   const services = [
     {
       icon: <Truck className="h-12 w-12 text-blue-600" />,
@@ -31,48 +42,7 @@ const App = () => {
     },
   ];
 
-  const reviews = [
-    {
-      name: "Александр Петров",
-      company: "ООО «Строймаркет»",
-      rating: 5,
-      date: "15.12.2024",
-      text: "Отличная компания! Перевозили строительные материалы на объект. Все доставлено в срок, груз в целости и сохранности. Водитель профессиональный, вежливый. Обязательно обратимся снова.",
-      avatar:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-    },
-    {
-      name: "Елена Смирнова",
-      company: "ИП Смирнова Е.В.",
-      rating: 5,
-      date: "10.12.2024",
-      text: "Пользуюсь услугами уже второй год. Всегда четко, быстро, без задержек. Цены адекватные, персонал отзывчивый. Особенно нравится система отслеживания груза.",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
-    },
-    {
-      name: "Михаил Козлов",
-      company: "ТД «Электроком»",
-      rating: 4,
-      date: "08.12.2024",
-      text: "Хорошая логистическая компания. Несколько раз перевозили оборудование. Один раз была небольшая задержка, но менеджеры оперативно решили вопрос и предоставили компенсацию.",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
-    },
-    {
-      name: "Анна Волкова",
-      company: "Кафе «Уютное местечко»",
-      rating: 5,
-      date: "05.12.2024",
-      text: "Регулярно заказываем доставку продуктов для кафе. ГрузЛогистика - надежный партнер. Соблюдают температурный режим, всегда вовремя. Рекомендую!",
-      avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-    },
-  ];
-
-  const averageRating = (
-    reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length
-  ).toFixed(1);
+  const averageRating = getAverageRating();
 
   return (
     <QueryClientProvider client={queryClient}>
@@ -239,29 +209,27 @@ const App = () => {
                     {averageRating}
                   </span>
                   <span className="text-gray-600">
-                    ({reviews.length} отзывов)
+                    ({totalReviews} отзывов)
                   </span>
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 mb-12">
-                {reviews.map((review, index) => (
+                {reviews.slice(0, 4).map((review, index) => (
                   <div
-                    key={index}
+                    key={review.id || index}
                     className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                   >
                     <div className="flex items-start space-x-4 mb-4">
-                      <img
-                        src={review.avatar}
-                        alt={review.name}
-                        className="w-12 h-12 rounded-full object-cover"
-                      />
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-orange-500 flex items-center justify-center text-white font-bold text-lg">
+                        {review.name.charAt(0)}
+                      </div>
                       <div className="flex-1">
                         <h3 className="font-bold text-gray-900">
                           {review.name}
                         </h3>
                         <p className="text-sm text-gray-600">
-                          {review.company}
+                          {review.service}
                         </p>
                         <div className="flex items-center space-x-2 mt-1">
                           <div className="flex">
@@ -281,14 +249,45 @@ const App = () => {
                     <div className="relative">
                       <Quote className="h-6 w-6 text-gray-300 absolute -top-2 -left-1" />
                       <p className="text-gray-700 leading-relaxed pl-6">
-                        {review.text}
+                        {review.comment}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
+
+              {!showReviewForm && (
+                <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg p-8 text-white text-center">
+                  <h3 className="text-2xl font-bold mb-4">
+                    Поделитесь своим опытом
+                  </h3>
+                  <p className="text-lg mb-6">
+                    Ваш отзыв поможет нам стать лучше
+                  </p>
+                  <button
+                    onClick={() => setShowReviewForm(true)}
+                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Оставить отзыв
+                  </button>
+                </div>
+              )}
             </div>
           </section>
+
+          {showReviewForm && (
+            <div className="relative">
+              <ReviewForm onReviewSubmit={handleReviewSubmit} />
+              <div className="text-center py-4">
+                <button
+                  onClick={() => setShowReviewForm(false)}
+                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                >
+                  Отменить
+                </button>
+              </div>
+            </div>
+          )}
 
           <Footer />
           <ChatBot />
