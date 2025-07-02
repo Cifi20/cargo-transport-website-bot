@@ -27,7 +27,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 5т",
       image:
-        "https://cdn.poehali.dev/files/2b9fa896-f44c-4dbc-8d61-f8884daec340.png",
+        "https://cdn.poehali.dev/files/a617ea40-783e-4437-81a5-b77b7048bee4.png",
       capacity: "до 5 тонн",
       dimensions: "5×2.2×2.2 м",
       pallets: "14 паллет",
