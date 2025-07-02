@@ -3,6 +3,17 @@ import Icon from "@/components/ui/icon";
 const TariffSection = () => {
   const trucks = [
     {
+      title: "Каблук 0.5т",
+      image:
+        "https://cdn.poehali.dev/files/298ae05e-51d6-43b3-b790-164e7a8fef98.png",
+      capacity: "до 0.5 тонн",
+      dimensions: "1.5×1×1 м",
+      pallets: "1 паллета",
+      minTime: "1 час",
+      price: "от 600 ₽/час",
+      mkadPrice: "25 ₽/км",
+    },
+    {
       title: "Газель 1.5т",
       image:
         "https://cdn.poehali.dev/files/fd8a2dbd-4dc7-4e96-bf02-60f8a0e45967.png",
