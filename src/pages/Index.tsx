@@ -1,17 +1,21 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Calculator from "@/components/Calculator";
-import ChatBot from "@/components/ChatBot";
+import Advantages from "@/components/Advantages";
+import TariffSection from "@/components/TariffSection";
+import LoaderServices from "@/components/LoaderServices";
+import OrderForm from "@/components/OrderForm";
 import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="bg-white">
       <Header />
       <Hero />
-      <Calculator />
+      <Advantages />
+      <TariffSection />
+      <LoaderServices />
+      <OrderForm />
       <Footer />
-      <ChatBot />
     </div>
   );
 };
