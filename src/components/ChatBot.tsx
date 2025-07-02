@@ -13,7 +13,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Здравствуйте! Я помогу вам с вопросами о грузоперевозках. Что вас интересует?",
+      text: "Здравствуйте! Меня зовут Алексей, я помогу вам с вопросами о грузоперевозках. Что вас интересует?",
       sender: "bot",
       timestamp: new Date(),
     },
@@ -104,9 +104,20 @@ const ChatBot = () => {
         <div className="fixed bottom-24 right-6 w-96 h-96 bg-white rounded-lg shadow-2xl border z-50 flex flex-col">
           {/* Заголовок */}
           <div className="bg-blue-600 text-white p-4 rounded-t-lg flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <Bot className="h-5 w-5" />
-              <span className="font-semibold">Помощник по грузоперевозкам</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-10 h-10 rounded-full bg-white overflow-hidden flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format"
+                  alt="Алексей"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <div className="font-semibold">Алексей</div>
+                <div className="text-xs text-blue-100">
+                  Помощник по грузоперевозкам
+                </div>
+              </div>
             </div>
             <button
               onClick={() => setIsOpen(false)}
@@ -132,7 +143,13 @@ const ChatBot = () => {
                 >
                   <div className="flex items-start space-x-2">
                     {message.sender === "bot" && (
-                      <Bot className="h-4 w-4 mt-1 flex-shrink-0" />
+                      <div className="w-6 h-6 rounded-full bg-white overflow-hidden flex items-center justify-center flex-shrink-0 mt-1">
+                        <img
+                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face&auto=format"
+                          alt="Алексей"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
                     )}
                     <div>
                       <p className="text-sm">{message.text}</p>
@@ -157,8 +174,14 @@ const ChatBot = () => {
             {isTyping && (
               <div className="flex justify-start">
                 <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
-                  <div className="flex items-center space-x-1">
-                    <Bot className="h-4 w-4" />
+                  <div className="flex items-center space-x-2">
+                    <div className="w-6 h-6 rounded-full bg-white overflow-hidden flex items-center justify-center flex-shrink-0">
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face&auto=format"
+                        alt="Алексей"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="flex space-x-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
                       <div
