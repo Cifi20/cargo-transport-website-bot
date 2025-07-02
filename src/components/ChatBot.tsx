@@ -107,7 +107,7 @@ const ChatBot = () => {
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full bg-white overflow-hidden flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format"
+                  src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=40&h=40&fit=crop&crop=face&auto=format"
                   alt="Алексей"
                   className="w-full h-full object-cover"
                 />
@@ -145,7 +145,7 @@ const ChatBot = () => {
                     {message.sender === "bot" && (
                       <div className="w-6 h-6 rounded-full bg-white overflow-hidden flex items-center justify-center flex-shrink-0 mt-1">
                         <img
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face&auto=format"
+                          src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=24&h=24&fit=crop&crop=face&auto=format"
                           alt="Алексей"
                           className="w-full h-full object-cover"
                         />
@@ -177,7 +177,7 @@ const ChatBot = () => {
                   <div className="flex items-center space-x-2">
                     <div className="w-6 h-6 rounded-full bg-white overflow-hidden flex items-center justify-center flex-shrink-0">
                       <img
-                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=24&h=24&fit=crop&crop=face&auto=format"
+                        src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?w=24&h=24&fit=crop&crop=face&auto=format"
                         alt="Алексей"
                         className="w-full h-full object-cover"
                       />
