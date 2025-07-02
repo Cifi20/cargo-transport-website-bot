@@ -11,8 +11,6 @@ const Header = () => {
     { name: "О компании", href: "/about" },
     { name: "Услуги", href: "/services" },
     { name: "Тарифы", href: "/rates" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Отслеживание", href: "/tracking" },
     { name: "Отзывы", href: "/reviews" },
     { name: "Контакты", href: "/contacts" },
   ];
