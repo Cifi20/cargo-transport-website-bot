@@ -5,6 +5,7 @@ import TariffSection from "@/components/TariffSection";
 import LoaderServices from "@/components/LoaderServices";
 import OrderForm from "@/components/OrderForm";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <LoaderServices />
       <OrderForm />
       <Footer />
+      <ChatBot />
     </div>
   );
 };
