@@ -1,46 +1,50 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Truck } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const menuItems = [
-    { name: "Главная", href: "/" },
-    { name: "О компании", href: "/about" },
-    { name: "Услуги", href: "/services" },
-    { name: "Тарифы", href: "/rates" },
-    { name: "Отзывы", href: "/reviews" },
-    { name: "Контакты", href: "/contacts" },
+    { name: "Главная", href: "#home" },
+    { name: "О компании", href: "#about" },
+    { name: "Услуги", href: "#services" },
+    { name: "Тарифы", href: "#tariffs" },
+    { name: "Отзывы", href: "#reviews" },
+    { name: "Контакты", href: "#contacts" },
   ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <button
+            onClick={() => scrollToSection("#home")}
+            className="flex items-center space-x-2"
+          >
             <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
               <Truck className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">CargoРФ</span>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.href}
-                className={`transition-colors duration-200 font-medium ${
-                  location.pathname === item.href
-                    ? "text-blue-600 border-b-2 border-blue-600"
-                    : "text-gray-700 hover:text-blue-600"
-                }`}
+                onClick={() => scrollToSection(item.href)}
+                className="transition-colors duration-200 font-medium text-gray-700 hover:text-blue-600"
               >
                 {item.name}
-              </Link>
+              </button>
             ))}
           </nav>
 
@@ -62,18 +66,16 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               {menuItems.map((item) => (
-                <Link
+                <button
                   key={item.name}
-                  to={item.href}
-                  className={`block px-3 py-2 rounded-md transition-colors duration-200 ${
-                    location.pathname === item.href
-                      ? "text-blue-600 bg-blue-50"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    scrollToSection(item.href);
+                    setIsMenuOpen(false);
+                  }}
+                  className="block w-full text-left px-3 py-2 rounded-md transition-colors duration-200 text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                 >
                   {item.name}
-                </Link>
+                </button>
               ))}
             </div>
           </div>
