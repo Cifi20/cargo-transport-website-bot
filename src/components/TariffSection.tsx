@@ -5,7 +5,7 @@ const TariffSection = () => {
     {
       title: "Газель 1.5т",
       image:
-        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
+        "https://cdn.poehali.dev/files/effce1df-3d6e-4e4f-b1a3-3573bff4f43a.png",
       capacity: "до 1.5 тонн",
       dimensions: "3×1.8×1.8 м",
       pallets: "4 паллета",
