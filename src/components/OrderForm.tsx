@@ -135,15 +135,6 @@ const OrderForm = () => {
                     <p>cargo6705@gmail.com</p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <div className="w-8 h-8 flex items-center justify-center mr-3 mt-0.5">
-                    <Icon name="MapPin" size={20} />
-                  </div>
-                  <div>
-                    <h3 className="font-medium">Адрес</h3>
-                    <p>г. Москва, ул. Транспортная, 15</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="md:w-1/2 p-8">
