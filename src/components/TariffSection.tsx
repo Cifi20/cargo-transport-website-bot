@@ -39,7 +39,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 10т",
       image:
-        "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
+        "https://cdn.poehali.dev/files/304d03c1-d4ac-4c90-9063-88d5489604ad.png",
       capacity: "до 10 тонн",
       dimensions: "7×2.4×2.4 м",
       pallets: "17 паллет",
