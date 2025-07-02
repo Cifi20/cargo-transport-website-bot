@@ -12,35 +12,7 @@ export interface Review {
 const STORAGE_KEY = "user_reviews";
 
 // Базовые отзывы для примера
-const defaultReviews: Review[] = [
-  {
-    id: "default-1",
-    name: "Александр Петров",
-    service: "Газель 1.5т",
-    rating: 5,
-    comment:
-      "Отличная компания! Перевозили мебель при переезде. Все доставлено в срок, груз в целости и сохранности. Водитель профессиональный, вежливый.",
-    date: "15.12.2024",
-  },
-  {
-    id: "default-2",
-    name: "Елена Смирнова",
-    service: "Услуги грузчиков",
-    rating: 5,
-    comment:
-      "Грузчики работали быстро и аккуратно. Помогли с подъемом мебели на 5 этаж. Очень довольна сервисом!",
-    date: "10.12.2024",
-  },
-  {
-    id: "default-3",
-    name: "Михаил Козлов",
-    service: "Грузовик 3т",
-    rating: 4,
-    comment:
-      "Хорошая логистическая компания. Перевозили оборудование для офиса. Все прошло гладко, рекомендую.",
-    date: "08.12.2024",
-  },
-];
+const defaultReviews: Review[] = [];
 
 export const useReviews = () => {
   const [reviews, setReviews] = useState<Review[]>([]);
