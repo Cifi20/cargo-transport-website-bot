@@ -184,6 +184,7 @@ const OrderForm = () => {
                       <SelectItem value="3">Грузовик 3т</SelectItem>
                       <SelectItem value="5">Грузовик 5т</SelectItem>
                       <SelectItem value="10">Грузовик 10т</SelectItem>
+                      <SelectItem value="20">Фура 20т</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
