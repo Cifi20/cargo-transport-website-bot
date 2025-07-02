@@ -46,6 +46,17 @@ const TariffSection = () => {
       price: "от 1500 ₽/час",
       mkadPrice: "45 ₽/км",
     },
+    {
+      title: "Фура 20т",
+      image:
+        "https://readdy.ai/api/search-image?query=Large%20semi%20truck%20trailer%2020%20ton%2C%20white%20color%2C%20side%20view%2C%20clean%20simple%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image&width=600&height=400&seq=7&orientation=landscape",
+      capacity: "до 20 тонн",
+      dimensions: "13.6×2.45×2.45 м",
+      pallets: "33 паллета",
+      minTime: "6 часов",
+      price: "от 2500 ₽/час",
+      mkadPrice: "60 ₽/км",
+    },
   ];
 
   return (
@@ -54,7 +65,7 @@ const TariffSection = () => {
         <h2 className="text-3xl font-bold text-center mb-12">
           Тарифы на грузоперевозки
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
           {trucks.map((truck, index) => (
             <div
               key={index}
