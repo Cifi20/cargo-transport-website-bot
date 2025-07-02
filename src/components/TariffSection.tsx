@@ -5,7 +5,7 @@ const TariffSection = () => {
     {
       title: "Газель 1.5т",
       image:
-        "https://readdy.ai/api/search-image?query=Small%20cargo%20truck%201.5%20ton%2C%20white%20color%2C%20side%20view%2C%20clean%20simple%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image&width=600&height=400&seq=2&orientation=landscape",
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
       capacity: "до 1.5 тонн",
       dimensions: "3×1.8×1.8 м",
       pallets: "4 паллета",
@@ -16,7 +16,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 3т",
       image:
-        "https://readdy.ai/api/search-image?query=Medium%20cargo%20truck%203%20ton%2C%20white%20color%2C%20side%20view%2C%20clean%20simple%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image&width=600&height=400&seq=5&orientation=landscape",
+        "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
       capacity: "до 3 тонн",
       dimensions: "4×1.8×1.8 м",
       pallets: "8 паллет",
@@ -39,7 +39,7 @@ const TariffSection = () => {
     {
       title: "Грузовик 10т",
       image:
-        "https://readdy.ai/api/search-image?query=Large%20cargo%20truck%2010%20ton%2C%20white%20color%2C%20side%20view%2C%20clean%20simple%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image&width=600&height=400&seq=6&orientation=landscape",
+        "https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
       capacity: "до 10 тонн",
       dimensions: "7×2.4×2.4 м",
       pallets: "17 паллет",
@@ -50,7 +50,7 @@ const TariffSection = () => {
     {
       title: "Фура 20т",
       image:
-        "https://readdy.ai/api/search-image?query=Semi%20truck%20with%20trailer%2020%20ton%20capacity%2C%20white%20cab%20and%20trailer%2C%20side%20profile%20view%2C%20professional%20commercial%20vehicle%20photography%2C%20clean%20white%20background%2C%20high%20resolution&width=600&height=400&seq=1&orientation=landscape",
+        "https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600&h=400&fit=crop&crop=center&auto=format&q=80",
       capacity: "до 20 тонн",
       dimensions: "13.6×2.45×2.45 м",
       pallets: "33 паллета",
