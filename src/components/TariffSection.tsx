@@ -141,6 +141,23 @@ const TariffSection = () => {
                     </div>
                     <span>За МКАД: {truck.mkadPrice}</span>
                   </li>
+                  <li className="flex items-start">
+                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <Icon name="Wrench" size={16} className="text-primary" />
+                    </div>
+                    <span>Наличие гидроборта: +1ч к стоимости</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <Icon
+                        name="Forklift"
+                        size={16}
+                        fallback="Truck"
+                        className="text-primary"
+                      />
+                    </div>
+                    <span>Наличие роклы: +1ч к стоимости</span>
+                  </li>
                 </ul>
                 <button className="w-full bg-primary text-white py-3 rounded-button whitespace-nowrap font-medium">
                   Заказать
