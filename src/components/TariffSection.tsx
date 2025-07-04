@@ -21,7 +21,7 @@ const TariffSection = () => {
       dimensions: "3-4×1.8×1.8 м",
       pallets: "4-6 паллет",
       minTime: "2 часа",
-      price: "от 1140 ₽/час",
+      price: "1140-1200 ₽/час",
       mkadPrice: "35 ₽/км",
     },
     {
@@ -32,7 +32,7 @@ const TariffSection = () => {
       dimensions: "4×1.8×1.8 м",
       pallets: "8 паллет",
       minTime: "3 часа",
-      price: "от 1000 ₽/час",
+      price: "1350-1500 ₽/час",
       mkadPrice: "35 ₽/км",
     },
     {
@@ -44,7 +44,7 @@ const TariffSection = () => {
       pallets: "14 паллет",
       volume: "40 м³",
       minTime: "3 часа",
-      price: "от 1200 ₽/час",
+      price: "1550-1650 ₽/час",
       mkadPrice: "40 ₽/км",
     },
     {
@@ -55,7 +55,7 @@ const TariffSection = () => {
       dimensions: "7×2.4×2.4 м",
       pallets: "17 паллет",
       minTime: "4 часа",
-      price: "от 1500 ₽/час",
+      price: "1750 ₽/час",
       mkadPrice: "45 ₽/км",
     },
     {
@@ -66,7 +66,7 @@ const TariffSection = () => {
       dimensions: "13.6×2.45×2.45 м",
       pallets: "33 паллета",
       minTime: "6 часов",
-      price: "от 2500 ₽/час",
+      price: "2650 ₽/час",
       mkadPrice: "60 ₽/км",
     },
   ];
