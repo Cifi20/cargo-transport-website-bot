@@ -133,7 +133,7 @@ const TariffSection = () => {
                         className="text-primary"
                       />
                     </div>
-                    <span>Стоимость: {truck.price}</span>
+                    <span>Стоимость: 1050р. час</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
