@@ -133,13 +133,13 @@ const TariffSection = () => {
                         className="text-primary"
                       />
                     </div>
-                    <span>Стоимость: 1050р. час</span>
+                    <span>Стоимость: {truck.price}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
                       <Icon name="MapPin" size={16} className="text-primary" />
                     </div>
-                    <span>За МКАД: 35 р.км</span>
+                    <span>За МКАД: {truck.mkadPrice}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
