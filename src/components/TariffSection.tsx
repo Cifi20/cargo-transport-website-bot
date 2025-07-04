@@ -20,7 +20,7 @@ const TariffSection = () => {
       capacity: "до 1.5 тонн",
       dimensions: "3-4×1.8×1.8 м",
       pallets: "4-6 паллет",
-      minTime: "2 часа",
+      minTime: "4-5 часов",
       price: "1140-1200 ₽/час",
       mkadPrice: "35 ₽/км",
     },
@@ -31,7 +31,7 @@ const TariffSection = () => {
       capacity: "до 3 тонн",
       dimensions: "4×1.8×1.8 м",
       pallets: "8 паллет",
-      minTime: "3 часа",
+      minTime: "5-6 часов",
       price: "1350-1500 ₽/час",
       mkadPrice: "35 ₽/км",
     },
@@ -43,7 +43,7 @@ const TariffSection = () => {
       dimensions: "5×2.2×2.2 м",
       pallets: "14 паллет",
       volume: "40 м³",
-      minTime: "3 часа",
+      minTime: "7 часов",
       price: "1550-1650 ₽/час",
       mkadPrice: "40 ₽/км",
     },
@@ -54,7 +54,7 @@ const TariffSection = () => {
       capacity: "до 10 тонн",
       dimensions: "7×2.4×2.4 м",
       pallets: "17 паллет",
-      minTime: "4 часа",
+      minTime: "7 часов",
       price: "1750 ₽/час",
       mkadPrice: "45 ₽/км",
     },
@@ -65,7 +65,7 @@ const TariffSection = () => {
       capacity: "до 20 тонн",
       dimensions: "13.6×2.45×2.45 м",
       pallets: "33 паллета",
-      minTime: "6 часов",
+      minTime: "7 часов",
       price: "2650 ₽/час",
       mkadPrice: "60 ₽/км",
     },
@@ -123,7 +123,7 @@ const TariffSection = () => {
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
                       <Icon name="Clock" size={16} className="text-primary" />
                     </div>
-                    <span>Мин. время заказа 4 часа</span>
+                    <span>Мин. время заказа: {truck.minTime}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
