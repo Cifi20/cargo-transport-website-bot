@@ -7,7 +7,7 @@ const Services = () => {
       icon: <Truck className="h-12 w-12 text-blue-600" />,
       title: "Автомобильные перевозки",
       description: "Доставка грузов любого объема по России и СНГ",
-      features: ["До 20 тонн", "Срочная доставка", "GPS отслеживание"],
+      features: ["До 20 тонн", "Срочная доставка"],
     },
     {
       icon: <Package className="h-12 w-12 text-orange-500" />,
