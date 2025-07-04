@@ -143,6 +143,16 @@ const TariffSection = () => {
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                      <Icon
+                        name="Navigation"
+                        size={16}
+                        className="text-primary"
+                      />
+                    </div>
+                    <span>Выезд: +1ч к стоимости</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
                       <Icon name="Wrench" size={16} className="text-primary" />
                     </div>
                     <span>Наличие гидроборта: +1ч к стоимости</span>
