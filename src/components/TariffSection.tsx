@@ -123,7 +123,7 @@ const TariffSection = () => {
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
                       <Icon name="Clock" size={16} className="text-primary" />
                     </div>
-                    <span>Мин. время заказа: {truck.minTime}</span>
+                    <span>Мин. время заказа 4 часа</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
