@@ -2,8 +2,8 @@ const LoaderServices = () => {
   const services = [
     {
       service: "Грузчик (стандартные работы)",
-      price: "350 ₽/час",
-      minTime: "2 часа",
+      price: "800 ₽/час",
+      minTime: "4 часа",
       note: "Погрузка/разгрузка, перемещение",
     },
     {
