@@ -10,7 +10,7 @@ import LoaderServices from "@/components/LoaderServices";
 import OrderForm from "@/components/OrderForm";
 import ReviewForm from "@/components/ReviewForm";
 import Footer from "@/components/Footer";
-import ChatBot from "@/components/ChatBot";
+
 import { useReviews } from "@/hooks/useReviews";
 import { useState } from "react";
 import { Truck, Clock, Users, Target, Award, Star, Quote } from "lucide-react";
@@ -353,7 +353,6 @@ const App = () => {
           )}
 
           <Footer />
-          <ChatBot />
         </div>
       </TooltipProvider>
     </QueryClientProvider>
