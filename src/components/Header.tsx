@@ -32,9 +32,7 @@ const Header = () => {
             <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
               <Truck className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">
-              Умный переезд
-            </span>
+            <span className="text-xl font-bold text-gray-900">Smart move</span>
           </button>
 
           {/* Desktop Navigation */}

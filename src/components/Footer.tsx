@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
                 <Truck className="h-6 w-6 text-white" />
               </div>
-              <span className="text-xl font-bold">Умный переезд</span>
+              <span className="text-xl font-bold">Smart move</span>
             </div>
             <p className="text-gray-400 mb-4">
               Профессиональные грузоперевозки по всей России с гарантией
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>© 2025 Умный переезд. Все права защищены.</p>
+          <p>© 2025 Smart move. Все права защищены.</p>
         </div>
       </div>
     </footer>
