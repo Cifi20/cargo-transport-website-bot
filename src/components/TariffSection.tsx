@@ -169,9 +169,12 @@ const TariffSection = () => {
                     <span>Наличие роклы: +1ч к стоимости</span>
                   </li>
                 </ul>
-                <button className="w-full bg-primary text-white py-3 rounded-button whitespace-nowrap font-medium">
+                <a
+                  href="#services"
+                  className="w-full bg-primary text-white py-3 rounded-button whitespace-nowrap font-medium inline-block text-center hover:bg-primary/90 transition-colors"
+                >
                   Заказать
-                </button>
+                </a>
               </div>
             </div>
           ))}
