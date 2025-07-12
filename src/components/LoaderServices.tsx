@@ -75,9 +75,12 @@ const LoaderServices = () => {
           </table>
         </div>
         <div className="mt-8 text-center">
-          <button className="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap font-medium">
+          <a
+            href="#services"
+            className="bg-primary text-white px-6 py-3 rounded-button whitespace-nowrap font-medium inline-block hover:bg-primary/90 transition-colors"
+          >
             Заказать грузчиков
-          </button>
+          </a>
         </div>
       </div>
     </section>
