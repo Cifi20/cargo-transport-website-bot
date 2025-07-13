@@ -72,108 +72,100 @@ const TariffSection = () => {
   ];
 
   return (
-    <section id="tariffs" className="py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Тарифы на грузоперевозки
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+    <section id="tariffs" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Тарифы на грузоперевозки
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Выберите подходящий автомобиль для ваших задач
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {trucks.map((truck, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:translate-y-[-5px]"
+              className="group relative bg-white border-2 border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:border-blue-200 hover:shadow-2xl hover:-translate-y-2"
             >
-              <div className="h-48 overflow-hidden">
+              {/* Изображение */}
+              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50">
                 <img
                   src={truck.image}
                   alt={truck.title}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                  <span className="text-sm font-semibold text-blue-600">{truck.capacity}</span>
+                </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{truck.title}</h3>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="Truck" size={16} className="text-primary" />
-                    </div>
-                    <span>Грузоподъемность: {truck.capacity}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="Ruler" size={16} className="text-primary" />
-                    </div>
-                    <span>Габариты кузова: {truck.dimensions}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="Package" size={16} className="text-primary" />
-                    </div>
-                    <span>Вместимость: {truck.pallets}</span>
-                  </li>
+
+              {/* Контент */}
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                  {truck.title}
+                </h3>
+
+                {/* Характеристики в таблице */}
+                <div className="space-y-4 mb-8">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Габариты:</span>
+                    <span className="text-gray-900 font-semibold">{truck.dimensions}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Паллеты:</span>
+                    <span className="text-gray-900 font-semibold">{truck.pallets}</span>
+                  </div>
                   {truck.volume && (
-                    <li className="flex items-start">
-                      <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                        <Icon name="Box" size={16} className="text-primary" />
-                      </div>
-                      <span>Объем: {truck.volume}</span>
-                    </li>
+                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                      <span className="text-gray-600 font-medium">Объем:</span>
+                      <span className="text-gray-900 font-semibold">{truck.volume}</span>
+                    </div>
                   )}
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="Clock" size={16} className="text-primary" />
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">Мин. время:</span>
+                    <span className="text-gray-900 font-semibold">{truck.minTime}</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600 font-medium">За МКАД:</span>
+                    <span className="text-gray-900 font-semibold">{truck.mkadPrice}</span>
+                  </div>
+                </div>
+
+                {/* Цена */}
+                <div className="text-center mb-8">
+                  <div className="bg-gradient-to-r from-blue-600 to-orange-500 text-white py-4 px-6 rounded-xl">
+                    <div className="text-sm font-medium opacity-90 mb-1">Стоимость</div>
+                    <div className="text-2xl font-bold">{truck.price}</div>
+                  </div>
+                </div>
+
+                {/* Дополнительные услуги */}
+                <div className="bg-gray-50 rounded-xl p-4 mb-6">
+                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Дополнительно:</h4>
+                  <div className="space-y-2 text-sm text-gray-600">
+                    <div className="flex justify-between">
+                      <span>Выезд</span>
+                      <span className="font-medium">+1ч</span>
                     </div>
-                    <span>Мин. время заказа: {truck.minTime}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon
-                        name="DollarSign"
-                        size={16}
-                        className="text-primary"
-                      />
+                    <div className="flex justify-between">
+                      <span>Гидроборт</span>
+                      <span className="font-medium">+1ч</span>
                     </div>
-                    <span>Стоимость: {truck.price}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="MapPin" size={16} className="text-primary" />
+                    <div className="flex justify-between">
+                      <span>Рокла</span>
+                      <span className="font-medium">+1ч</span>
                     </div>
-                    <span>За МКАД: {truck.mkadPrice}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon
-                        name="Navigation"
-                        size={16}
-                        className="text-primary"
-                      />
-                    </div>
-                    <span>Выезд: +1ч к стоимости</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon name="Wrench" size={16} className="text-primary" />
-                    </div>
-                    <span>Наличие гидроборта: +1ч к стоимости</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
-                      <Icon
-                        name="Forklift"
-                        size={16}
-                        fallback="Truck"
-                        className="text-primary"
-                      />
-                    </div>
-                    <span>Наличие роклы: +1ч к стоимости</span>
-                  </li>
-                </ul>
+                  </div>
+                </div>
+
+                {/* Кнопка заказа */}
                 <a
                   href="#services"
-                  className="w-full bg-primary text-white py-3 rounded-button whitespace-nowrap font-medium inline-block text-center hover:bg-primary/90 transition-colors"
+                  className="w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white py-4 rounded-xl font-semibold text-center inline-block transition-all duration-300 hover:from-blue-700 hover:to-orange-600 hover:shadow-lg transform hover:scale-105"
                 >
-                  Заказать
+                  Заказать автомобиль
                 </a>
               </div>
             </div>
