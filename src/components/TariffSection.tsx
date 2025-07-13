@@ -11,7 +11,7 @@ const TariffSection = () => {
       pallets: "1 паллета",
       minTime: "4 часа",
       price: "1000 ₽/час",
-      mkadPrice: "30 ₽/км",
+      mkadPrice: "32 ₽/км",
     },
     {
       title: "Газель до 2т",
@@ -22,7 +22,7 @@ const TariffSection = () => {
       pallets: "4-6 паллет",
       minTime: "4-5 часов",
       price: "1200-1400 ₽/час",
-      mkadPrice: "35 ₽/км",
+      mkadPrice: "37-50 ₽/км",
       variants: [
         "3м × 1.8 × 1.8м • 4 паллета • 9-11 м³ • до 1.5т",
         "4м × 2 × 2м • 6 паллет • 18-20 м³ • до 1.5т", 
@@ -39,7 +39,7 @@ const TariffSection = () => {
       pallets: "8-10 паллет",
       minTime: "5-6 часов",
       price: "1350-1500 ₽/час",
-      mkadPrice: "40 ₽/км",
+      mkadPrice: "50 ₽/км",
     },
     {
       title: "Грузовик 5т",
@@ -51,7 +51,7 @@ const TariffSection = () => {
       volume: "40 м³",
       minTime: "7 часов",
       price: "1550-1650 ₽/час",
-      mkadPrice: "45-55 ₽/км",
+      mkadPrice: "46-60 ₽/км",
     },
     {
       title: "Грузовик 10т",
@@ -62,7 +62,7 @@ const TariffSection = () => {
       pallets: "17 паллет",
       minTime: "7 часов",
       price: "1750 ₽/час",
-      mkadPrice: "60 ₽/км",
+      mkadPrice: "70 ₽/км",
     },
     {
       title: "Фура 20т",
