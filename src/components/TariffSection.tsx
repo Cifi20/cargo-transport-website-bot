@@ -167,7 +167,7 @@ const TariffSection = () => {
                   <h4 className="text-sm font-semibold text-gray-900 mb-3">Дополнительно:</h4>
                   <div className="space-y-2 text-sm text-gray-600">
                     <div className="flex justify-between">
-                      <span>Выезд</span>
+                      <span>Подача</span>
                       <span className="font-medium">+1ч</span>
                     </div>
                     {truck.title !== "Фура 20т" && (
