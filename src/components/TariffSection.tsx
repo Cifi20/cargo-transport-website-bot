@@ -74,6 +74,7 @@ const TariffSection = () => {
       minTime: "7 часов",
       price: "2650 ₽/час",
       mkadPrice: "80 ₽/км",
+      additional: ["Гидроборт +1ч"]
     },
   ];
 
@@ -170,7 +171,7 @@ const TariffSection = () => {
                       <span>Подача</span>
                       <span className="font-medium">+1ч</span>
                     </div>
-                    {truck.title !== "Фура 20т" && (
+                    {truck.title !== "Каблук 0.5т" && (
                       <div className="flex justify-between">
                         <span>Гидроборт</span>
                         <span className="font-medium">+1ч</span>
