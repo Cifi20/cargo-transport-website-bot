@@ -14,15 +14,21 @@ const TariffSection = () => {
       mkadPrice: "30 ₽/км",
     },
     {
-      title: "Газель 1.5т",
+      title: "Газель до 2т",
       image:
         "https://cdn.poehali.dev/files/fd8a2dbd-4dc7-4e96-bf02-60f8a0e45967.png",
-      capacity: "до 1.5 тонн",
-      dimensions: "3-4×1.8×1.8 м",
+      capacity: "до 2 тонн",
+      dimensions: "3-6 метров",
       pallets: "4-6 паллет",
       minTime: "4-5 часов",
       price: "1140-1200 ₽/час",
       mkadPrice: "30 ₽/км",
+      variants: [
+        "3м × 1.8 × 1.8м • 4 паллета • 9-11 м³",
+        "4м × 2 × 2м • 6 паллет • до 16 м³", 
+        "5м × 2 × 2.2м • объем 22-26 м³",
+        "6м × 2.2 × 2.4м • до 30 м³"
+      ]
     },
     {
       title: "Грузовик 3т",
@@ -109,14 +115,29 @@ const TariffSection = () => {
 
                 {/* Характеристики в таблице */}
                 <div className="space-y-4 mb-8">
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-600 font-medium">Габариты:</span>
-                    <span className="text-gray-900 font-semibold">{truck.dimensions}</span>
-                  </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-600 font-medium">Паллеты:</span>
-                    <span className="text-gray-900 font-semibold">{truck.pallets}</span>
-                  </div>
+                  {truck.variants ? (
+                    <div className="py-2 border-b border-gray-100">
+                      <span className="text-gray-600 font-medium block mb-3">Варианты кузова:</span>
+                      <div className="space-y-2">
+                        {truck.variants.map((variant, idx) => (
+                          <div key={idx} className="text-sm text-gray-700 bg-gray-50 p-2 rounded">
+                            {variant}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span className="text-gray-600 font-medium">Габариты:</span>
+                        <span className="text-gray-900 font-semibold">{truck.dimensions}</span>
+                      </div>
+                      <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                        <span className="text-gray-600 font-medium">Паллеты:</span>
+                        <span className="text-gray-900 font-semibold">{truck.pallets}</span>
+                      </div>
+                    </>
+                  )}
                   {truck.volume && (
                     <div className="flex justify-between items-center py-2 border-b border-gray-100">
                       <span className="text-gray-600 font-medium">Объем:</span>
