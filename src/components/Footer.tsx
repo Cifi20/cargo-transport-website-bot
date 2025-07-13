@@ -38,16 +38,6 @@ const Footer = () => {
                   <span className="text-sm font-bold">TG</span>
                 </div>
               </a>
-              <a
-                href="https://wa.me/79995925155"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
-              >
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold">WA</span>
-                </div>
-              </a>
             </div>
           </div>
 
