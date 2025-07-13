@@ -9,7 +9,7 @@ const TariffSection = () => {
       capacity: "до 0.5 тонн",
       dimensions: "1.5×1×1 м",
       pallets: "1 паллета",
-      minTime: "1 час",
+      minTime: "4 часа",
       price: "1000 ₽/час",
       mkadPrice: "30 ₽/км",
     },
