@@ -10,7 +10,7 @@ const TariffSection = () => {
       dimensions: "1.5×1×1 м",
       pallets: "1 паллета",
       minTime: "1 час",
-      price: "от 600 ₽/час",
+      price: "1000 ₽/час",
       mkadPrice: "30 ₽/км",
     },
     {
@@ -133,7 +133,7 @@ const TariffSection = () => {
                         className="text-primary"
                       />
                     </div>
-                    <span>Стоимость: 1000р/час</span>
+                    <span>Стоимость: {truck.price}</span>
                   </li>
                   <li className="flex items-start">
                     <div className="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
