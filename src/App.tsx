@@ -59,6 +59,7 @@ const App = () => {
           <Header />
           <Hero />
           <OrderForm />
+          <TariffSection />
           <Advantages />
 
           {/* About Section */}
@@ -183,7 +184,6 @@ const App = () => {
             </div>
           </section>
 
-          <TariffSection />
           <LoaderServices />
 
           {/* Reviews Section */}
