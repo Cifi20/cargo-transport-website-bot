@@ -73,7 +73,7 @@ const TariffSection = () => {
       pallets: "33 паллета",
       minTime: "7 часов",
       price: "2650 ₽/час",
-      mkadPrice: "70 ₽/км",
+      mkadPrice: "80 ₽/км",
     },
   ];
 
