@@ -36,6 +36,12 @@ const LoaderServices = () => {
       minTime: "—",
       note: "Транспортировка тяжелых грузов",
     },
+    {
+      service: "Поэтажка",
+      price: "от 50 ₽ за 1 ед.",
+      minTime: "—",
+      note: "Подъем/спуск груза по этажам",
+    },
   ];
 
   return (
