@@ -60,6 +60,7 @@ const App = () => {
           <Hero />
           <OrderForm />
           <TariffSection />
+          <LoaderServices />
           <Advantages />
 
           {/* About Section */}
@@ -183,8 +184,6 @@ const App = () => {
               </div>
             </div>
           </section>
-
-          <LoaderServices />
 
           {/* Reviews Section */}
           <section id="reviews" className="py-16 bg-gray-50">
