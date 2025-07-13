@@ -170,10 +170,12 @@ const TariffSection = () => {
                       <span>Выезд</span>
                       <span className="font-medium">+1ч</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>Гидроборт</span>
-                      <span className="font-medium">+1ч</span>
-                    </div>
+                    {truck.title !== "Фура 20т" && (
+                      <div className="flex justify-between">
+                        <span>Гидроборт</span>
+                        <span className="font-medium">+1ч</span>
+                      </div>
+                    )}
                     <div className="flex justify-between">
                       <span>Рокла</span>
                       <span className="font-medium">+1ч</span>
