@@ -99,49 +99,49 @@ const TariffSection = () => {
   ];
 
   return (
-    <section id="tariffs" className="py-20 bg-white">
+    <section id="tariffs" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-foreground mb-6">
             Тарифы на грузоперевозки
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Выберите подходящий автомобиль для ваших задач
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {trucks.map((truck, index) => (
             <div
               key={index}
-              className="group relative bg-white border-2 border-gray-100 rounded-2xl overflow-hidden transition-all duration-300 hover:border-blue-200 hover:shadow-2xl hover:-translate-y-2"
+              className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/20"
             >
               {/* Изображение */}
-              <div className="relative h-56 overflow-hidden bg-gradient-to-br from-blue-50 to-gray-50">
+              <div className="relative h-48 overflow-hidden bg-muted">
                 <img
                   src={truck.image}
                   alt={truck.title}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                  <span className="text-sm font-semibold text-blue-600">{truck.capacity}</span>
+                <div className="absolute top-3 right-3 bg-card/95 backdrop-blur-sm px-2.5 py-1 rounded-md border border-border">
+                  <span className="text-xs font-medium text-primary">{truck.capacity}</span>
                 </div>
               </div>
 
               {/* Контент */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-foreground mb-4 text-center">
                   {truck.title}
                 </h3>
 
                 {/* Характеристики в таблице */}
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 mb-6">
                   {truck.variants ? (
-                    <div className="py-2 border-b border-gray-100">
-                      <span className="text-gray-600 font-medium block mb-3">Варианты кузова:</span>
-                      <div className="space-y-2">
+                    <div className="py-2 border-b border-border">
+                      <span className="text-muted-foreground text-sm font-medium block mb-2">Варианты кузова:</span>
+                      <div className="space-y-1.5">
                         {truck.variants.map((variant, idx) => (
-                          <div key={idx} className="text-sm text-gray-700 bg-gray-50 p-2 rounded">
+                          <div key={idx} className="text-xs text-foreground bg-muted p-2 rounded border">
                             {variant}
                           </div>
                         ))}
@@ -149,44 +149,44 @@ const TariffSection = () => {
                     </div>
                   ) : (
                     <>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                        <span className="text-gray-600 font-medium">Габариты:</span>
-                        <span className="text-gray-900 font-semibold">{truck.dimensions}</span>
+                      <div className="flex justify-between items-center py-2 border-b border-border">
+                        <span className="text-muted-foreground text-sm">Габариты:</span>
+                        <span className="text-foreground text-sm font-medium">{truck.dimensions}</span>
                       </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                        <span className="text-gray-600 font-medium">Паллеты:</span>
-                        <span className="text-gray-900 font-semibold">{truck.pallets}</span>
+                      <div className="flex justify-between items-center py-2 border-b border-border">
+                        <span className="text-muted-foreground text-sm">Паллеты:</span>
+                        <span className="text-foreground text-sm font-medium">{truck.pallets}</span>
                       </div>
                     </>
                   )}
                   {truck.volume && (
-                    <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                      <span className="text-gray-600 font-medium">Объем:</span>
-                      <span className="text-gray-900 font-semibold">{truck.volume}</span>
+                    <div className="flex justify-between items-center py-2 border-b border-border">
+                      <span className="text-muted-foreground text-sm">Объем:</span>
+                      <span className="text-foreground text-sm font-medium">{truck.volume}</span>
                     </div>
                   )}
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-600 font-medium">Мин. время:</span>
-                    <span className="text-gray-900 font-semibold">{truck.minTime}</span>
+                  <div className="flex justify-between items-center py-2 border-b border-border">
+                    <span className="text-muted-foreground text-sm">Мин. время:</span>
+                    <span className="text-foreground text-sm font-medium">{truck.minTime}</span>
                   </div>
-                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
-                    <span className="text-gray-600 font-medium">За МКАД:</span>
-                    <span className="text-gray-900 font-semibold">{truck.mkadPrice}</span>
+                  <div className="flex justify-between items-center py-2 border-b border-border">
+                    <span className="text-muted-foreground text-sm">За МКАД:</span>
+                    <span className="text-foreground text-sm font-medium">{truck.mkadPrice}</span>
                   </div>
                 </div>
 
                 {/* Цена */}
-                <div className="text-center mb-8">
-                  <div className="bg-gradient-to-r from-blue-600 to-orange-500 text-white py-4 px-6 rounded-xl">
+                <div className="text-center mb-6">
+                  <div className="bg-primary text-primary-foreground py-4 px-4 rounded-md">
                     <div className="text-sm font-medium opacity-90 mb-1">Стоимость</div>
-                    <div className="text-2xl font-bold">{truck.price}</div>
+                    <div className="text-xl font-bold">{truck.price}</div>
                   </div>
                 </div>
 
                 {/* Дополнительные услуги */}
-                <div className="bg-gray-50 rounded-xl p-4 mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Дополнительно:</h4>
-                  <div className="space-y-2 text-sm text-gray-600">
+                <div className="bg-muted rounded-md p-4 mb-6">
+                  <h4 className="text-sm font-medium text-foreground mb-3">Дополнительно:</h4>
+                  <div className="space-y-2 text-sm text-muted-foreground">
                     <div className="flex justify-between">
                       <span>Подача</span>
                       <span className="font-medium">+1ч</span>
@@ -205,12 +205,9 @@ const TariffSection = () => {
                 </div>
 
                 {/* Кнопка заказа */}
-                <a
-                  href="#services"
-                  className="w-full bg-gradient-to-r from-blue-600 to-orange-500 text-white py-4 rounded-xl font-semibold text-center inline-block transition-all duration-300 hover:from-blue-700 hover:to-orange-600 hover:shadow-lg transform hover:scale-105"
-                >
+                <button className="w-full bg-accent text-accent-foreground py-3 rounded-md font-medium text-center transition-colors duration-200 hover:bg-accent/90">
                   Заказать автомобиль
-                </a>
+                </button>
               </div>
             </div>
           ))}
