@@ -48,11 +48,15 @@ const TariffSection = () => {
       image:
         "https://cdn.poehali.dev/files/6a6a8d7f-f17d-44dd-a544-ad3f42517bca.png",
       capacity: "до 3 тонн",
-      dimensions: "4×1.8×1.8 м",
-      pallets: "8-10 паллет",
+      dimensions: "4-5 метров",
+      pallets: "8-12 паллет",
       minTime: "5-6 часов",
       price: "1350-1500 ₽/час",
       mkadPrice: "50 ₽/км",
+      variants: [
+        "4м × 1.8 × 1.8м • 8 паллет • 13 м³",
+        "5м × 2 × 2м • 12 паллет • 20 м³"
+      ]
     },
     {
       title: "Грузовик 5т",
