@@ -14,20 +14,33 @@ const TariffSection = () => {
       mkadPrice: "32 ₽/км",
     },
     {
+      title: "Газель до 1.5т",
+      image:
+        "https://cdn.poehali.dev/files/fd8a2dbd-4dc7-4e96-bf02-60f8a0e45967.png",
+      capacity: "до 1.5 тонн",
+      dimensions: "3-4 метра",
+      pallets: "4-6 паллет",
+      minTime: "4 часа",
+      price: "1200 ₽/час",
+      mkadPrice: "37 ₽/км",
+      variants: [
+        "3м × 1.8 × 1.8м • 4 паллета • 9-11 м³",
+        "4м × 2 × 2м • 6 паллет • 18-20 м³"
+      ]
+    },
+    {
       title: "Газель до 2т",
       image:
         "https://cdn.poehali.dev/files/fd8a2dbd-4dc7-4e96-bf02-60f8a0e45967.png",
       capacity: "до 2 тонн",
-      dimensions: "3-6 метров",
-      pallets: "4-6 паллет",
-      minTime: "4-5 часов",
-      price: "1200-1400 ₽/час",
-      mkadPrice: "37-50 ₽/км",
+      dimensions: "5-6 метров",
+      pallets: "10-15 паллет",
+      minTime: "5 часов",
+      price: "1400 ₽/час",
+      mkadPrice: "50 ₽/км",
       variants: [
-        "3м × 1.8 × 1.8м • 4 паллета • 9-11 м³ • до 1.5т",
-        "4м × 2 × 2м • 6 паллет • 18-20 м³ • до 1.5т", 
-        "5м × 2 × 2.2м • объем 22-26 м³",
-        "6м × 2.2 × 2.4м • до 30 м³"
+        "5м × 2 × 2.2м • 10 паллет • 22-26 м³",
+        "6м × 2.2 × 2.4м • 15 паллет • до 30 м³"
       ]
     },
     {
