@@ -114,7 +114,10 @@ const TariffSection = () => {
           {trucks.map((truck, index) => (
             <div
               key={index}
-              className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+              className="group relative bg-card border border-border rounded-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:border-primary/30 hover:-translate-y-2 hover:scale-[1.02]"
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`
+              }}
             >
               {/* Изображение */}
               <div className="relative h-48 overflow-hidden bg-muted">
@@ -205,8 +208,12 @@ const TariffSection = () => {
                 </div>
 
                 {/* Кнопка заказа */}
-                <button className="w-full bg-accent text-accent-foreground py-3 rounded-md font-medium text-center transition-colors duration-200 hover:bg-accent/90">
-                  Заказать автомобиль
+                <button className="relative w-full bg-accent text-accent-foreground py-3 rounded-md font-medium text-center overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    Заказать автомобиль
+                    <span className="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </button>
               </div>
             </div>

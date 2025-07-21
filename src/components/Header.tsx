@@ -59,8 +59,9 @@ const Header = () => {
             >
               +7 (495) 123-45-67
             </a>
-            <button className="bg-primary text-primary-foreground px-6 py-2.5 text-sm font-medium rounded-md hover:bg-primary/90 transition-colors">
-              Заказать звонок
+            <button className="relative bg-primary text-primary-foreground px-6 py-2.5 text-sm font-medium rounded-md overflow-hidden group transition-all duration-300 hover:shadow-lg hover:scale-105 active:scale-95">
+              <span className="relative z-10">Заказать звонок</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </button>
           </div>
 
