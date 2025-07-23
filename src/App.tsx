@@ -393,8 +393,8 @@ const App = () => {
                       </div>
                       <div>
                         <h4 className="font-semibold text-card-foreground mb-1">Телефон</h4>
-                        <a href="tel:+74951234567" className="text-primary hover:text-primary/80 transition-colors font-medium">
-                          +7 (495) 123-45-67
+                        <a href="tel:+79995925155" className="text-primary hover:text-primary/80 transition-colors font-medium">
+                          +7 999 592 5155
                         </a>
                       </div>
                     </div>
