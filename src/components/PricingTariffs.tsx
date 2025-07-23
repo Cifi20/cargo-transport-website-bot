@@ -22,7 +22,7 @@ const PricingTariffs = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+    <section id="tariffs" className="py-20 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
       
       {/* Анимированный фон */}
       <div className="absolute inset-0 opacity-5">

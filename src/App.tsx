@@ -6,7 +6,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Advantages from "@/components/Advantages";
 import PricingTariffs from "@/components/PricingTariffs";
-import LoaderServices from "@/components/LoaderServices";
+
 import OrderForm from "@/components/OrderForm";
 import ReviewForm from "@/components/ReviewForm";
 import Footer from "@/components/Footer";
@@ -60,7 +60,6 @@ const App = () => {
           <Hero />
           <OrderForm />
           <PricingTariffs />
-          <LoaderServices />
           <Advantages />
 
           {/* About Section */}
