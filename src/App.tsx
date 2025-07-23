@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Advantages from "@/components/Advantages";
-import TariffSection from "@/components/TariffSection";
+import PricingTariffs from "@/components/PricingTariffs";
 import LoaderServices from "@/components/LoaderServices";
 import OrderForm from "@/components/OrderForm";
 import ReviewForm from "@/components/ReviewForm";
@@ -59,7 +59,7 @@ const App = () => {
           <Header />
           <Hero />
           <OrderForm />
-          <TariffSection />
+          <PricingTariffs />
           <LoaderServices />
           <Advantages />
 
