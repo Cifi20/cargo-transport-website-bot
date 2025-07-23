@@ -106,20 +106,7 @@ const Header = () => {
                 </span>
               </a>
               
-              <button className="relative bg-gradient-to-r from-primary to-accent text-white px-6 py-3 text-sm font-medium rounded-xl overflow-hidden group transition-all duration-500 hover:shadow-2xl hover:scale-105 active:scale-95">
-                <span className="relative z-10 group-hover:scale-105 transition-transform duration-300">
-                  Заказать звонок
-                </span>
-                
-                {/* Анимированный блик */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                
-                {/* Пульсирующий эффект */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 animate-pulse rounded-xl"></div>
-                
-                {/* Светящаяся граница */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500 -z-10"></div>
-              </button>
+
             </div>
 
             {/* Анимированная мобильная кнопка */}
@@ -167,9 +154,7 @@ const Header = () => {
                   <span>+7 (495) 123-45-67</span>
                 </a>
                 
-                <button className="w-full bg-gradient-to-r from-primary to-accent text-white px-4 py-3 text-sm font-medium rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105 active:scale-95">
-                  Заказать звонок
-                </button>
+
               </div>
             </div>
           </div>
