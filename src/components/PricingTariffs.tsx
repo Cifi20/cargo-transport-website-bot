@@ -340,14 +340,6 @@ const PricingTariffs = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {tariff.features.map((feature, idx) => (
-                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-foreground font-medium">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
                   <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
                     <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
@@ -396,14 +388,6 @@ const PricingTariffs = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {tariff.features.map((feature, idx) => (
-                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-foreground font-medium">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
                   <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
                     <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
@@ -450,14 +434,6 @@ const PricingTariffs = () => {
                     <div className="text-muted-foreground">
                       {tariff.minOrder}
                     </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {tariff.features.map((feature, idx) => (
-                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
-                        <span className="text-foreground font-medium">{feature}</span>
-                      </div>
-                    ))}
                   </div>
 
                   <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
