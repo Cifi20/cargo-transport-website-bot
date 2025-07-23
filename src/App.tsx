@@ -55,7 +55,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <div className="bg-white">
+        <div className="bg-background">
           <Header />
           <Hero />
           <OrderForm />
@@ -64,28 +64,28 @@ const App = () => {
           <Advantages />
 
           {/* About Section */}
-          <section id="about" className="py-16 bg-gray-50">
+          <section id="about" className="py-16 bg-muted">
             <div className="max-w-7xl mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl font-bold text-foreground mb-4">
                   О компании
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Уже 8 лет успешной работы в сфере грузоперевозок и логистики
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12 mb-16">
                 <div>
-                  <p className="text-gray-600 mb-4">Мы практикуем индивидуальный подход к клиенту и комплексное решение поставленных перед нами задач. Наша компания специализируется на предоставлении высококачественных услуг по грузоперевозкам, по Домашним переездам, Складских переездов, Офисных переездов, обеспечивая надежную и своевременную доставку грузов любой сложности.</p>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground mb-4">Мы практикуем индивидуальный подход к клиенту и комплексное решение поставленных перед нами задач. Наша компания специализируется на предоставлении высококачественных услуг по грузоперевозкам, по Домашним переездам, Складских переездов, Офисных переездов, обеспечивая надежную и своевременную доставку грузов любой сложности.</p>
+                  <p className="text-muted-foreground">
                     Опыт и профессионализм: Наша команда имеет многолетний опыт
                     в сфере грузоперевозок. Надежность и безопасность: Мы
                     гарантируем сохранность грузов благодаря современным
                     системам отслеживания и профессиональной упаковке.
                   </p>
                 </div>
-                <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg p-8 text-white">
+                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-8 text-primary-foreground">
                   <h3 className="text-2xl font-bold mb-4">Наши достижения</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
@@ -105,32 +105,32 @@ const App = () => {
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-                  <Target className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <div className="bg-card p-8 rounded-lg shadow-lg text-center">
+                  <Target className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">
                     Наша миссия
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Обеспечивать надежную и эффективную доставку грузов, помогая
                     бизнесу развиваться.
                   </p>
                 </div>
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-                  <Users className="h-12 w-12 text-orange-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <div className="bg-card p-8 rounded-lg shadow-lg text-center">
+                  <Users className="h-12 w-12 text-accent mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">
                     Наши ценности
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Честность, профессионализм, ответственность и индивидуальный
                     подход к каждому клиенту.
                   </p>
                 </div>
-                <div className="bg-white p-8 rounded-lg shadow-lg text-center">
-                  <Award className="h-12 w-12 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                <div className="bg-card p-8 rounded-lg shadow-lg text-center">
+                  <Award className="h-12 w-12 text-primary mx-auto mb-4" />
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">
                     Наше видение
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-muted-foreground">
                     Стать лучшей логистической компанией России, устанавливая
                     новые стандарты качества.
                   </p>
@@ -140,13 +140,13 @@ const App = () => {
           </section>
 
           {/* Services Section */}
-          <section id="services" className="py-16 bg-white">
+          <section id="services" className="py-16 bg-background">
             <div className="max-w-7xl mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl font-bold text-foreground mb-4">
                   Наши услуги
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                   Полный спектр логистических услуг для вашего бизнеса
                 </p>
               </div>
@@ -155,15 +155,15 @@ const App = () => {
                 {services.map((service, index) => (
                   <div
                     key={index}
-                    className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border"
+                    className="bg-card p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-border"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">{service.icon}</div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                        <h3 className="text-2xl font-bold text-card-foreground mb-3">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 mb-4">
+                        <p className="text-muted-foreground mb-4">
                           {service.description}
                         </p>
                         <ul className="space-y-2">
@@ -172,8 +172,8 @@ const App = () => {
                               key={idx}
                               className="flex items-center space-x-2"
                             >
-                              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                              <span className="text-gray-700">{feature}</span>
+                              <div className="w-2 h-2 bg-primary rounded-full"></div>
+                              <span className="text-muted-foreground">{feature}</span>
                             </li>
                           ))}
                         </ul>
@@ -186,13 +186,13 @@ const App = () => {
           </section>
 
           {/* Reviews Section */}
-          <section id="reviews" className="py-16 bg-gray-50">
+          <section id="reviews" className="py-16 bg-muted">
             <div className="max-w-6xl mx-auto px-4">
               <div className="text-center mb-12">
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                <h2 className="text-4xl font-bold text-foreground mb-4">
                   Отзывы клиентов
                 </h2>
-                <p className="text-xl text-gray-600 mb-6">
+                <p className="text-xl text-muted-foreground mb-6">
                   Что говорят о нас наши клиенты
                 </p>
                 <div className="flex items-center justify-center space-x-2">
@@ -200,14 +200,14 @@ const App = () => {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star
                         key={star}
-                        className={`h-6 w-6 ${parseFloat(averageRating) >= star ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                        className={`h-6 w-6 ${parseFloat(averageRating) >= star ? "text-primary fill-current" : "text-muted-foreground"}`}
                       />
                     ))}
                   </div>
-                  <span className="text-lg font-semibold text-gray-900">
+                  <span className="text-lg font-semibold text-foreground">
                     {averageRating}
                   </span>
-                  <span className="text-gray-600">
+                  <span className="text-muted-foreground">
                     ({totalReviews} отзывов)
                   </span>
                 </div>
@@ -217,17 +217,17 @@ const App = () => {
                 {reviews.slice(0, 4).map((review, index) => (
                   <div
                     key={review.id || index}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                    className="bg-card rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                   >
                     <div className="flex items-start space-x-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-orange-500 flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-lg">
                         {review.name.charAt(0)}
                       </div>
                       <div className="flex-1">
-                        <h3 className="font-bold text-gray-900">
+                        <h3 className="font-bold text-card-foreground">
                           {review.name}
                         </h3>
-                        <p className="text-sm text-gray-600">
+                        <p className="text-sm text-muted-foreground">
                           {review.service}
                         </p>
                         <div className="flex items-center space-x-2 mt-1">
@@ -235,19 +235,19 @@ const App = () => {
                             {[1, 2, 3, 4, 5].map((star) => (
                               <Star
                                 key={star}
-                                className={`h-4 w-4 ${review.rating >= star ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                                className={`h-4 w-4 ${review.rating >= star ? "text-primary fill-current" : "text-muted-foreground"}`}
                               />
                             ))}
                           </div>
-                          <span className="text-sm text-gray-500">
+                          <span className="text-sm text-muted-foreground">
                             {review.date}
                           </span>
                         </div>
                       </div>
                     </div>
                     <div className="relative">
-                      <Quote className="h-6 w-6 text-gray-300 absolute -top-2 -left-1" />
-                      <p className="text-gray-700 leading-relaxed pl-6">
+                      <Quote className="h-6 w-6 text-muted-foreground absolute -top-2 -left-1" />
+                      <p className="text-card-foreground leading-relaxed pl-6">
                         {review.comment}
                       </p>
                     </div>
@@ -313,7 +313,7 @@ const App = () => {
               </div>
 
               {!showReviewForm && (
-                <div className="bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg p-8 text-white text-center">
+                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-8 text-primary-foreground text-center">
                   <h3 className="text-2xl font-bold mb-4">
                     Поделитесь своим опытом
                   </h3>
@@ -322,7 +322,7 @@ const App = () => {
                   </p>
                   <button
                     onClick={() => setShowReviewForm(true)}
-                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    className="bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
                   >
                     Оставить отзыв
                   </button>
@@ -337,7 +337,7 @@ const App = () => {
               <div className="text-center py-4">
                 <button
                   onClick={() => setShowReviewForm(false)}
-                  className="text-gray-600 hover:text-gray-800 transition-colors"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
                 >
                   Отменить
                 </button>
