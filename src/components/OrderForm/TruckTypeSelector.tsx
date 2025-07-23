@@ -22,7 +22,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
     { 
       value: "0.5", 
       label: "Каблук 0.5т", 
-      price: "от 800₽/час", 
+      price: "1000₽/час", 
       image: "https://cdn.poehali.dev/files/ce94cf7c-93f8-4c21-8882-65a545426e61.png",
       capacity: "до 500 кг",
       dimensions: "1.8×1.2×1.1 м",
@@ -31,17 +31,17 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
     { 
       value: "1.5", 
       label: "Газель 1.5т", 
-      price: "от 1200₽/час", 
+      price: "1200-1400₽/час", 
       image: "https://cdn.poehali.dev/files/3154aed1-c34a-4684-9c75-92efc45a4b6d.png",
       capacity: "до 1500 кг",
-      dimensions: "3×2×1.8 м",
+      dimensions: "3-4×2×1.8 м",
       features: ["Мебель", "Бытовая техника", "Переезды"],
       popular: true
     },
     { 
       value: "3", 
       label: "Грузовик 3т", 
-      price: "от 1800₽/час", 
+      price: "1350-1500₽/час", 
       image: "https://cdn.poehali.dev/files/cc586858-9ba2-45c2-bdc9-e39e20428cd0.png",
       capacity: "до 3000 кг",
       dimensions: "4.2×2.1×2.1 м",
@@ -50,7 +50,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
     { 
       value: "5", 
       label: "Грузовик 5т", 
-      price: "от 2500₽/час", 
+      price: "1550-1650₽/час", 
       image: "https://cdn.poehali.dev/files/d902f8b5-77ac-4fc5-91b0-508fff21e96c.png",
       capacity: "до 5000 кг",
       dimensions: "6×2.4×2.3 м",
@@ -59,7 +59,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
     { 
       value: "10", 
       label: "Грузовик 10т", 
-      price: "от 3500₽/час", 
+      price: "1750₽/час", 
       image: "https://cdn.poehali.dev/files/077b809c-4af2-4b49-a707-d6a283a921aa.png",
       capacity: "до 10000 кг",
       dimensions: "8×2.4×2.5 м",
@@ -68,7 +68,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
     { 
       value: "20", 
       label: "Фура 20т", 
-      price: "от 4500₽/час", 
+      price: "2650₽/час", 
       image: "https://cdn.poehali.dev/files/ef37edc2-ecb4-4230-86a4-86e8e818582d.png",
       capacity: "до 20000 кг",
       dimensions: "13.6×2.45×2.7 м",
@@ -146,7 +146,12 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
                   {truck.price}
                 </div>
                 <div className="text-xs text-muted-foreground mt-1">
-                  мин. заказ 2 часа
+                  {truck.value === "0.5" && "мин. заказ 4 часа"}
+                  {truck.value === "1.5" && "мин. заказ 4 часа"}
+                  {truck.value === "3" && "мин. заказ 5-6 часов"}
+                  {truck.value === "5" && "мин. заказ 7 часов"}
+                  {truck.value === "10" && "мин. заказ 7 часов"}
+                  {truck.value === "20" && "мин. заказ 7 часов"}
                 </div>
               </div>
 
