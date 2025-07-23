@@ -7,11 +7,12 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 gap-8">
           {/* Логотип и описание */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="bg-gradient-to-r from-blue-600 to-orange-500 p-2 rounded-lg">
-                <Truck className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl font-bold">Smart move</span>
+            <div className="flex items-center mb-4">
+              <img 
+                src="https://cdn.poehali.dev/files/1ab939bc-b836-4a5c-a703-6e1cf43f85f6.jpg"
+                alt="SMARTMOVE"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-gray-400 mb-4">
               Профессиональные грузоперевозки по всей России с гарантией

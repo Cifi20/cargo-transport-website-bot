@@ -60,34 +60,16 @@ const Header = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
-            {/* Анимированный логотип */}
+            {/* Логотип SMARTMOVE */}
             <button
               onClick={() => scrollToSection("#home")}
-              className="flex items-center space-x-3 group"
+              className="flex items-center group"
             >
-              <div className="relative bg-gradient-to-br from-primary to-accent p-3 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                <Truck className="h-7 w-7 text-white group-hover:scale-110 transition-transform duration-300" />
-                
-                {/* Пульсирующий эффект */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-xl animate-ping opacity-20"></div>
-                
-                {/* Частицы вокруг логотипа */}
-                <div className="absolute -top-1 -right-1 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce"></div>
-                <div className="absolute -bottom-1 -left-1 w-1.5 h-1.5 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-bounce" style={{ animationDelay: '0.2s' }}></div>
-              </div>
-              
-              <div className="text-left">
-                <div className="overflow-hidden">
-                  <span className="block text-2xl font-bold text-foreground group-hover:text-primary transition-all duration-500 transform group-hover:scale-105">
-                    SMART
-                  </span>
-                </div>
-                <div className="overflow-hidden">
-                  <span className="block text-lg font-light text-primary transform transition-all duration-500 group-hover:translate-x-1">
-                    MOVE
-                  </span>
-                </div>
-              </div>
+              <img 
+                src="https://cdn.poehali.dev/files/1ab939bc-b836-4a5c-a703-6e1cf43f85f6.jpg"
+                alt="SMARTMOVE"
+                className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+              />
             </button>
 
             {/* Навигация с эффектами */}
