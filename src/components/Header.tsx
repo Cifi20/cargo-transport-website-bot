@@ -19,6 +19,7 @@ const Header = () => {
     { name: "О компании", href: "#about" },
     { name: "Услуги", href: "#loader-services" },
     { name: "Тарифы", href: "#tariffs" },
+    { name: "Оставить заявку", href: "#order-form" },
     { name: "Отзывы", href: "#reviews" },
     { name: "Контакты", href: "#contacts" },
   ];

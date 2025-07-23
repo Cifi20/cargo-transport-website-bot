@@ -5,6 +5,13 @@ import { Button } from "@/components/ui/button";
 const PricingTariffs = () => {
   const [activeCategory, setActiveCategory] = useState("transport");
 
+  const scrollToOrderForm = () => {
+    const element = document.querySelector('#order-form');
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   // Точные тарифы как у Грузовичкоф
   const transportTariffs = [
     {
@@ -285,6 +292,7 @@ const PricingTariffs = () => {
 
                   {/* Кнопка */}
                   <Button 
+                    onClick={scrollToOrderForm}
                     className={`w-full group/btn relative overflow-hidden ${
                       tariff.popular
                         ? 'bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30'
@@ -340,7 +348,7 @@ const PricingTariffs = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                  <Button onClick={scrollToOrderForm} className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
                     <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
                       Заказать Газель 1.5т
@@ -388,7 +396,7 @@ const PricingTariffs = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                  <Button onClick={scrollToOrderForm} className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
                     <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
                       Заказать Грузовик 3т
@@ -436,7 +444,7 @@ const PricingTariffs = () => {
                     </div>
                   </div>
 
-                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                  <Button onClick={scrollToOrderForm} className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
                     <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
                       Заказать Грузовик 5т
@@ -492,7 +500,7 @@ const PricingTariffs = () => {
                     ))}
                   </div>
 
-                  <Button variant="outline" className="w-full group/btn border-primary/20 hover:bg-primary hover:text-white transition-all duration-300">
+                  <Button onClick={scrollToOrderForm} variant="outline" className="w-full group/btn border-primary/20 hover:bg-primary hover:text-white transition-all duration-300">
                     <span className="flex items-center justify-center gap-2 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="Plus" size={16} className="group-hover/btn:rotate-90 transition-transform duration-300" />
                       Добавить к заказу
@@ -546,7 +554,7 @@ const PricingTariffs = () => {
                     ))}
                   </div>
 
-                  <Button className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn">
+                  <Button onClick={scrollToOrderForm} className="w-full bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn">
                     <span className="flex items-center justify-center gap-2 group-hover/btn:scale-105 transition-transform duration-300">
                       <Icon name="MapPin" size={16} className="group-hover/btn:bounce transition-all duration-300" />
                       Рассчитать маршрут

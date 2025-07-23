@@ -143,7 +143,7 @@ const OrderForm = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
+    <section id="order-form" className="py-20 bg-gradient-to-br from-background via-muted/30 to-background relative overflow-hidden">
       
       {/* Анимированный фон */}
       <div className="absolute inset-0 opacity-5">

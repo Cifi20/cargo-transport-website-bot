@@ -313,19 +313,41 @@ const App = () => {
               </div>
 
               {!showReviewForm && (
-                <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-8 text-primary-foreground text-center">
-                  <h3 className="text-2xl font-bold mb-4">
-                    Поделитесь своим опытом
-                  </h3>
-                  <p className="text-lg mb-6">
-                    Ваш отзыв поможет нам стать лучше
-                  </p>
-                  <button
-                    onClick={() => setShowReviewForm(true)}
-                    className="bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
-                  >
-                    Оставить отзыв
-                  </button>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-r from-primary to-accent rounded-lg p-8 text-primary-foreground text-center">
+                    <h3 className="text-2xl font-bold mb-4">
+                      Поделитесь своим опытом
+                    </h3>
+                    <p className="text-lg mb-6">
+                      Ваш отзыв поможет нам стать лучше
+                    </p>
+                    <button
+                      onClick={() => setShowReviewForm(true)}
+                      className="bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
+                    >
+                      Оставить отзыв
+                    </button>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-accent to-primary rounded-lg p-8 text-primary-foreground text-center">
+                    <h3 className="text-2xl font-bold mb-4">
+                      Нужна грузоперевозка?
+                    </h3>
+                    <p className="text-lg mb-6">
+                      Заполните заявку и получите расчет за 2 минуты
+                    </p>
+                    <button
+                      onClick={() => {
+                        const element = document.querySelector('#order-form');
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="bg-primary-foreground text-primary px-8 py-3 rounded-lg font-semibold hover:bg-muted transition-colors"
+                    >
+                      Оставить заявку
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
