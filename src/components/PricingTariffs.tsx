@@ -10,6 +10,7 @@ const PricingTariffs = () => {
     {
       type: "Каблук до 0.5т",
       emoji: "🚐",
+      image: "https://cdn.poehali.dev/files/ce94cf7c-93f8-4c21-8882-65a545426e61.png",
       capacity: "до 500 кг",
       dimensions: "1.8×1.2×1.1 м",
       price: "от 800₽/час",
@@ -20,6 +21,7 @@ const PricingTariffs = () => {
     {
       type: "Газель до 1.5т",
       emoji: "🚚",
+      image: "https://cdn.poehali.dev/files/3154aed1-c34a-4684-9c75-92efc45a4b6d.png",
       capacity: "до 1500 кг",
       dimensions: "3×2×1.8 м",
       price: "от 1200₽/час",
@@ -30,6 +32,7 @@ const PricingTariffs = () => {
     {
       type: "Грузовик до 3т",
       emoji: "🚛",
+      image: "https://cdn.poehali.dev/files/cc586858-9ba2-45c2-bdc9-e39e20428cd0.png",
       capacity: "до 3000 кг",
       dimensions: "4.2×2.1×2.1 м",
       price: "от 1800₽/час",
@@ -40,6 +43,7 @@ const PricingTariffs = () => {
     {
       type: "Грузовик до 5т",
       emoji: "🚜",
+      image: "https://cdn.poehali.dev/files/d902f8b5-77ac-4fc5-91b0-508fff21e96c.png",
       capacity: "до 5000 кг",
       dimensions: "6×2.4×2.3 м",
       price: "от 2500₽/час",
@@ -50,6 +54,7 @@ const PricingTariffs = () => {
     {
       type: "Грузовик до 10т",
       emoji: "🚛",
+      image: "https://cdn.poehali.dev/files/077b809c-4af2-4b49-a707-d6a283a921aa.png",
       capacity: "до 10000 кг",
       dimensions: "8×2.4×2.5 м",
       price: "от 3500₽/час",
@@ -60,6 +65,7 @@ const PricingTariffs = () => {
     {
       type: "Фура до 20т",
       emoji: "🚚",
+      image: "https://cdn.poehali.dev/files/077b809c-4af2-4b49-a707-d6a283a921aa.png",
       capacity: "до 20000 кг",
       dimensions: "13.6×2.45×2.7 м",
       price: "от 4500₽/час",
@@ -229,9 +235,19 @@ const PricingTariffs = () => {
                   
                   {/* Заголовок */}
                   <div className="text-center mb-6">
-                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {tariff.emoji}
-                    </div>
+                    {tariff.image ? (
+                      <div className="mb-4 relative overflow-hidden rounded-2xl bg-muted/30">
+                        <img 
+                          src={tariff.image}
+                          alt={tariff.type}
+                          className="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+                      </div>
+                    ) : (
+                      <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                        {tariff.emoji}
+                      </div>
+                    )}
                     <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
                       {tariff.type}
                     </h3>
