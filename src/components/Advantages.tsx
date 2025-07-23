@@ -90,7 +90,7 @@ const Advantages = () => {
           {advantages.map((advantage, index) => (
             <div
               key={index}
-              className={`group relative bg-card border border-border rounded-2xl p-8 transition-all duration-700 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 ${
+              className={`group relative bg-card border border-border rounded-2xl p-8 transition-all duration-700 hover:-translate-y-1 ${
                 visibleCards[index] ? 'animate-fadeInUp' : 'opacity-0 translate-y-8'
               }`}
               style={{
@@ -98,20 +98,17 @@ const Advantages = () => {
                 animationFillMode: 'both'
               }}
             >
-              {/* Градиентный border эффект */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl blur-xl -z-10"></div>
+              {/* Градиентный border эффект убран */}
               
               {/* Анимированная иконка */}
-              <div className={`relative w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br ${advantage.gradient} mb-6 mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+              <div className={`relative w-20 h-20 flex items-center justify-center rounded-2xl bg-gradient-to-br ${advantage.gradient} mb-6 mx-auto group-hover:scale-105 transition-all duration-300 shadow-md`}>
                 <Icon
                   name={advantage.icon}
                   size={32}
-                  className="text-white group-hover:scale-110 transition-transform duration-300"
+                  className="text-white transition-transform duration-300"
                 />
                 
-                {/* Плавающие частицы */}
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping"></div>
-                <div className="absolute -bottom-1 -left-1 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-ping" style={{ animationDelay: '0.2s' }}></div>
+                {/* Плавающие частицы убраны */}
               </div>
 
               {/* Заголовок */}
@@ -124,8 +121,7 @@ const Advantages = () => {
                 {advantage.description}
               </p>
 
-              {/* Hover эффект - волна */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 rounded-2xl"></div>
+              {/* Hover эффект - волна убран */}
             </div>
           ))}
         </div>
