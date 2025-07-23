@@ -146,7 +146,10 @@ const PricingTariffs = () => {
   ];
 
   const categories = [
-    { id: "transport", label: "Транспорт", icon: "Truck" },
+    { id: "transport", label: "Все авто", icon: "Truck" },
+    { id: "gazel-2t", label: "Газель 2т", icon: "Car" },
+    { id: "truck-3t", label: "Грузовик 3т", icon: "Truck" },
+    { id: "truck-5t", label: "Грузовик 5т", icon: "Truck" },
     { id: "services", label: "Услуги", icon: "Settings" },
     { id: "regions", label: "Межгород", icon: "MapPin" }
   ];
@@ -295,6 +298,174 @@ const PricingTariffs = () => {
                     {!tariff.popular && (
                       <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 origin-left"></div>
                     )}
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Газель до 2т */}
+        {activeCategory === "gazel-2t" && (
+          <div className="max-w-2xl mx-auto animate-fadeInUp">
+            {transportTariffs.filter(tariff => tariff.type.includes("1.5т")).map((tariff, index) => (
+              <div
+                key={index}
+                className="group relative bg-card border rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-105 overflow-hidden border-primary shadow-primary/20 ring-2 ring-primary/20"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div className="relative z-10 text-center">
+                  <div className="mb-6">
+                    <img 
+                      src={tariff.image}
+                      alt={tariff.type}
+                      className="w-full h-48 object-cover rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                      {tariff.type}
+                    </h3>
+                    <div className="text-muted-foreground space-y-1">
+                      <div className="text-lg">{tariff.capacity}</div>
+                      <div className="text-lg">{tariff.dimensions}</div>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 p-6 bg-muted/30 rounded-2xl border border-border/50">
+                    <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                      {tariff.price}
+                    </div>
+                    <div className="text-muted-foreground">
+                      {tariff.minOrder}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {tariff.features.map((feature, idx) => (
+                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
+                        <span className="text-foreground font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                    <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
+                      <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                      Заказать Газель 1.5т
+                      <Icon name="ArrowRight" size={20} className="transform group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Грузовик до 3т */}
+        {activeCategory === "truck-3t" && (
+          <div className="max-w-2xl mx-auto animate-fadeInUp">
+            {transportTariffs.filter(tariff => tariff.type.includes("3т")).map((tariff, index) => (
+              <div
+                key={index}
+                className="group relative bg-card border rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-105 overflow-hidden border-primary shadow-primary/20 ring-2 ring-primary/20"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div className="relative z-10 text-center">
+                  <div className="mb-6">
+                    <img 
+                      src={tariff.image}
+                      alt={tariff.type}
+                      className="w-full h-48 object-cover rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                      {tariff.type}
+                    </h3>
+                    <div className="text-muted-foreground space-y-1">
+                      <div className="text-lg">{tariff.capacity}</div>
+                      <div className="text-lg">{tariff.dimensions}</div>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 p-6 bg-muted/30 rounded-2xl border border-border/50">
+                    <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                      {tariff.price}
+                    </div>
+                    <div className="text-muted-foreground">
+                      {tariff.minOrder}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {tariff.features.map((feature, idx) => (
+                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
+                        <span className="text-foreground font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                    <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
+                      <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                      Заказать Грузовик 3т
+                      <Icon name="ArrowRight" size={20} className="transform group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </span>
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Грузовик до 5т */}
+        {activeCategory === "truck-5t" && (
+          <div className="max-w-2xl mx-auto animate-fadeInUp">
+            {transportTariffs.filter(tariff => tariff.type.includes("5т")).map((tariff, index) => (
+              <div
+                key={index}
+                className="group relative bg-card border rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-700 hover:scale-105 overflow-hidden border-primary shadow-primary/20 ring-2 ring-primary/20"
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+
+                <div className="relative z-10 text-center">
+                  <div className="mb-6">
+                    <img 
+                      src={tariff.image}
+                      alt={tariff.type}
+                      className="w-full h-48 object-cover rounded-2xl mb-4 group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <h3 className="text-3xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
+                      {tariff.type}
+                    </h3>
+                    <div className="text-muted-foreground space-y-1">
+                      <div className="text-lg">{tariff.capacity}</div>
+                      <div className="text-lg">{tariff.dimensions}</div>
+                    </div>
+                  </div>
+
+                  <div className="mb-8 p-6 bg-muted/30 rounded-2xl border border-border/50">
+                    <div className="text-4xl font-bold text-primary mb-2 group-hover:scale-110 transition-transform duration-300">
+                      {tariff.price}
+                    </div>
+                    <div className="text-muted-foreground">
+                      {tariff.minOrder}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    {tariff.features.map((feature, idx) => (
+                      <div key={idx} className="p-4 bg-primary/5 rounded-xl border border-primary/20">
+                        <span className="text-foreground font-medium">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <Button className="w-full h-16 bg-gradient-to-r from-primary to-accent hover:shadow-2xl hover:shadow-primary/30 group/btn text-lg">
+                    <span className="flex items-center justify-center gap-3 group-hover/btn:scale-105 transition-transform duration-300">
+                      <Icon name="ShoppingCart" size={20} className="group-hover/btn:rotate-12 transition-transform duration-300" />
+                      Заказать Грузовик 5т
+                      <Icon name="ArrowRight" size={20} className="transform group-hover/btn:translate-x-1 transition-transform duration-300" />
+                    </span>
                   </Button>
                 </div>
               </div>
