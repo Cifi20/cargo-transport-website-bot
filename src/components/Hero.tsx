@@ -1,4 +1,4 @@
-import { ArrowRight, Truck, Clock, Shield, Star, Phone, MapPin, CheckCircle, Users, Award } from "lucide-react";
+import { Truck, Clock, Shield, Star, CheckCircle, Users, Award } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -124,29 +124,7 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Живые кнопки действий */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fadeInUp" style={{animationDelay: '800ms'}}>
-              <button className="group relative bg-gradient-to-r from-accent via-orange-500 to-red-500 text-white px-10 py-5 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-accent/50 hover:scale-110 active:scale-95">
-                <span className="relative z-10 flex items-center justify-center gap-3 group-hover:scale-105 transition-transform duration-300">
-                  <Phone className="w-6 h-6 group-hover:wiggle animate-bounce-gentle" />
-                  Заказать сейчас
-                  <ArrowRight className="w-6 h-6 transform group-hover:translate-x-2 group-hover:scale-110 transition-all duration-300" />
-                </span>
-                
-                {/* Множественные эффекты */}
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500 via-pink-500 to-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="absolute inset-0 animate-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="absolute -inset-1 bg-gradient-to-r from-accent via-orange-500 to-red-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-50 animate-glow transition-opacity duration-500 -z-10"></div>
-              </button>
-              
-              <button className="group border-2 border-white/40 text-white px-10 py-5 rounded-2xl font-bold text-lg backdrop-blur-xl hover:bg-white/20 transition-all duration-500 hover:scale-105 active:scale-95 hover:border-accent relative overflow-hidden">
-                <span className="relative z-10 flex items-center justify-center gap-2 group-hover:scale-105 transition-transform duration-300">
-                  <MapPin className="w-5 h-5 group-hover:bounce-gentle" />
-                  Рассчитать стоимость
-                </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-              </button>
-            </div>
+
 
             {/* Живые преимущества */}
             <div className="grid grid-cols-3 gap-6 pt-8 animate-fadeInUp" style={{animationDelay: '1000ms'}}>
