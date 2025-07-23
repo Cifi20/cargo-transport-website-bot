@@ -5,7 +5,7 @@ export const transportTariffs = [
     image: "https://cdn.poehali.dev/files/ce94cf7c-93f8-4c21-8882-65a545426e61.png",
     capacity: "до 500 кг",
     dimensions: "1.8×1.2×1.1 м",
-    price: "от 1000₽/час",
+    price: "1000₽/час",
     minOrder: "мин. заказ 4 часа",
     features: ["Городские перевозки", "Документы", "Посылки"],
     popular: false
