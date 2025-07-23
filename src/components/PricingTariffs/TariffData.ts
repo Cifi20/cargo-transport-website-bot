@@ -38,9 +38,9 @@ export const transportTariffs = [
     image: "https://cdn.poehali.dev/files/d902f8b5-77ac-4fc5-91b0-508fff21e96c.png",
     capacity: "до 5000 кг",
     dimensions: "6×2.4×2.3 м",
-    price: "2500₽/час",
-    minOrder: "мин. заказ 3 часа",
-    features: ["Оборудование", "Промышленные грузы", "Длинномеры", "Выезд +1 час к стоимости"],
+    price: "1550-1650₽/час",
+    minOrder: "мин. заказ 7 часов",
+    features: ["Оборудование", "Промышленные грузы", "Длинномеры", "Выезд +1 час к стоимости", "За МКАД 46-60₽/км"],
     popular: false
   },
   {
@@ -49,9 +49,9 @@ export const transportTariffs = [
     image: "https://cdn.poehali.dev/files/077b809c-4af2-4b49-a707-d6a283a921aa.png",
     capacity: "до 10000 кг",
     dimensions: "8×2.4×2.5 м",
-    price: "3500₽/час",
-    minOrder: "мин. заказ 4 часа",
-    features: ["Тяжелые грузы", "Манипулятор", "Гидроборт", "Выезд +1 час к стоимости"],
+    price: "1750₽/час",
+    minOrder: "мин. заказ 7 часов",
+    features: ["Тяжелые грузы", "Манипулятор", "Гидроборт", "Выезд +1 час к стоимости", "За МКАД 70₽/км"],
     popular: false
   },
   {
@@ -60,9 +60,9 @@ export const transportTariffs = [
     image: "https://cdn.poehali.dev/files/ef37edc2-ecb4-4230-86a4-86e8e818582d.png",
     capacity: "до 20000 кг",
     dimensions: "13.6×2.45×2.7 м",
-    price: "4500₽/час",
-    minOrder: "мин. заказ 4 часа",
-    features: ["Межгород", "Большие объемы", "Европаллеты", "Выезд +1 час к стоимости"],
+    price: "2650₽/час",
+    minOrder: "мин. заказ 7 часов",
+    features: ["Межгород", "Большие объемы", "Европаллеты", "Выезд +1 час к стоимости", "За МКАД 80₽/км"],
     popular: false
   }
 ];
