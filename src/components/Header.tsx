@@ -45,12 +45,7 @@ const Header = () => {
               <span>Москва и область</span>
             </div>
           </div>
-          <div className="flex items-center space-x-2 group cursor-pointer">
-            <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="font-medium group-hover:scale-105 transition-transform duration-300">
-              8 (800) 555-77-99
-            </span>
-          </div>
+
         </div>
       </div>
 
@@ -96,15 +91,7 @@ const Header = () => {
 
             {/* CTA секция с анимациями */}
             <div className="hidden md:flex items-center space-x-4">
-              <a 
-                href="tel:+74951234567"
-                className="group flex items-center space-x-2 text-sm font-medium text-foreground hover:text-primary transition-all duration-300"
-              >
-                <Phone className="w-4 h-4 group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300" />
-                <span className="group-hover:scale-105 transition-transform duration-300">
-                  +7 (495) 123-45-67
-                </span>
-              </a>
+
               
 
             </div>
@@ -146,13 +133,7 @@ const Header = () => {
               ))}
               
               <div className="pt-4 mt-4 border-t border-border space-y-3">
-                <a 
-                  href="tel:+74951234567"
-                  className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors duration-300 group"
-                >
-                  <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                  <span>+7 (495) 123-45-67</span>
-                </a>
+
                 
 
               </div>
