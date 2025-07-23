@@ -165,8 +165,8 @@ const LoaderServices = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                 <CheckCircle className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Гарантия качества</h3>
-              <p className="text-muted-foreground">100% выполнение в срок</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">Профессионализм</h3>
+              <p className="text-muted-foreground">Опыт работы более 8 лет</p>
             </div>
           </div>
         </div>

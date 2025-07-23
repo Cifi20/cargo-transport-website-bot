@@ -410,58 +410,7 @@ const PricingTariffs = () => {
           </div>
         )}
 
-        {/* Нижний блок с гарантиями */}
-        <div className="mt-20 bg-gradient-to-r from-primary via-blue-600 to-accent rounded-3xl p-12 text-white text-center relative overflow-hidden animate-fadeInUp">
-          
-          {/* Декоративные элементы */}
-          <div className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full animate-float blur-2xl"></div>
-          <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-accent/30 rounded-full animate-pulse-soft blur-xl"></div>
 
-          <div className="relative z-10">
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl animate-bounce-gentle">
-                <Icon name="Shield" size={40} className="text-white" />
-              </div>
-            </div>
-            
-            <h3 className="text-4xl font-bold mb-6">
-              Гарантии качества
-            </h3>
-            
-            <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-              Фиксированные цены без доплат. Страхование груза до 1 млн рублей. 
-              Опытные водители и грузчики со стажем от 5 лет.
-            </p>
-            
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {[
-                { icon: "DollarSign", title: "Без доплат", desc: "Цена не изменится" },
-                { icon: "Shield", title: "Страхование", desc: "До 1 млн рублей" },
-                { icon: "Clock", title: "Точно в срок", desc: "Гарантия времени" }
-              ].map((guarantee, idx) => (
-                <div key={idx} className="text-center group" style={{ animationDelay: `${idx * 200}ms` }}>
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-2xl mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                    <Icon name={guarantee.icon} size={24} className="text-white" />
-                  </div>
-                  <h4 className="font-bold text-lg mb-2 group-hover:scale-105 transition-transform duration-300">
-                    {guarantee.title}
-                  </h4>
-                  <p className="text-white/90 group-hover:text-white transition-colors duration-300">
-                    {guarantee.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-            
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90 font-bold text-lg px-12 py-4 group">
-              <span className="flex items-center justify-center gap-3 group-hover:scale-105 transition-transform duration-300">
-                <Icon name="Calculator" size={20} className="group-hover:rotate-12 transition-transform duration-300" />
-                Рассчитать стоимость
-                <Icon name="ArrowRight" size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
