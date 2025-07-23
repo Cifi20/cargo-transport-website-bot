@@ -13,6 +13,8 @@ interface OrderData {
   unloadingAddress: string;
   loadingFloor: string;
   unloadingFloor: string;
+  outsideMkad: string;
+  mkadDistance: string;
 }
 
 export const sendToTelegram = async (
@@ -43,6 +45,7 @@ export const sendToTelegram = async (
 • Поэтажка загрузки: ${getFloorText(orderData.loadingFloor)}
 • Выгрузка: ${orderData.unloadingAddress || "Не указан"}
 • Поэтажка выгрузки: ${getFloorText(orderData.unloadingFloor)}
+• Выезд за МКАД: ${orderData.outsideMkad === "yes" ? "Да" : "Нет"}${orderData.outsideMkad === "yes" && orderData.mkadDistance ? ` (${orderData.mkadDistance} км)` : ""}
 
 _Заявка отправлена с сайта_`;
 

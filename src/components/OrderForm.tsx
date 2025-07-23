@@ -32,6 +32,8 @@ const OrderForm = () => {
     unloadingAddress: "",
     loadingFloor: "",
     unloadingFloor: "",
+    outsideMkad: "",
+    mkadDistance: "",
   });
 
   const formatPhoneNumber = (value: string) => {
@@ -105,6 +107,8 @@ const OrderForm = () => {
             unloadingAddress: "",
             loadingFloor: "",
             unloadingFloor: "",
+            outsideMkad: "",
+            mkadDistance: "",
           });
         }, 3000);
       } else {
@@ -312,6 +316,37 @@ const OrderForm = () => {
                     focusedField={focusedField}
                     setFocusedField={setFocusedField}
                   />
+
+                  {/* Выезд за МКАД */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <FormField
+                      id="outsideMkad"
+                      label="Выезд за МКАД?"
+                      icon="MapPin"
+                      type="select"
+                      value={formData.outsideMkad}
+                      onChange={(value) => handleInputChange("outsideMkad", value)}
+                      placeholder="Выберите вариант"
+                      options={yesNoOptions}
+                      className="animate-fadeInUp"
+                    />
+
+                    {formData.outsideMkad === "yes" && (
+                      <FormField
+                        id="mkadDistance"
+                        label="Расстояние от МКАД (км)"
+                        icon="Route"
+                        type="number"
+                        placeholder="Укажите км"
+                        value={formData.mkadDistance}
+                        onChange={(value) => handleInputChange("mkadDistance", value)}
+                        onFocus={() => setFocusedField('mkadDistance')}
+                        onBlur={() => setFocusedField(null)}
+                        focusedField={focusedField}
+                        className="animate-fadeInUp"
+                      />
+                    )}
+                  </div>
 
                   {/* Дата и время */}
                   <FormField
