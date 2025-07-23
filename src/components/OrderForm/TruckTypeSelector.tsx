@@ -69,7 +69,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
       value: "20", 
       label: "Фура 20т", 
       price: "от 4500₽/час", 
-      image: "/img/2fb6652f-c8c9-4931-b99f-4fef826a3bf0.jpg",
+      image: "https://cdn.poehali.dev/files/ef37edc2-ecb4-4230-86a4-86e8e818582d.png",
       capacity: "до 20000 кг",
       dimensions: "13.6×2.45×2.7 м",
       features: ["Межгород", "Большие объемы", "Европаллеты"]

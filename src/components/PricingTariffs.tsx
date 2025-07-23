@@ -65,7 +65,7 @@ const PricingTariffs = () => {
     {
       type: "Фура до 20т",
       emoji: "🚚",
-      image: "https://cdn.poehali.dev/files/077b809c-4af2-4b49-a707-d6a283a921aa.png",
+      image: "https://cdn.poehali.dev/files/ef37edc2-ecb4-4230-86a4-86e8e818582d.png",
       capacity: "до 20000 кг",
       dimensions: "13.6×2.45×2.7 м",
       price: "от 4500₽/час",
