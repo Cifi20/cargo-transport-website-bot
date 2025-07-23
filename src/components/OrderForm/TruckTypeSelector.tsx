@@ -51,7 +51,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
       value: "5", 
       label: "Грузовик 5т", 
       price: "от 2500₽/час", 
-      image: "/img/1999f069-5544-4789-8bf4-91e3e1f2c170.jpg",
+      image: "/img/bff68085-3ed5-40dc-8e70-113d6d5d421d.jpg",
       capacity: "до 5000 кг",
       dimensions: "6×2.4×2.3 м",
       features: ["Оборудование", "Промышленные грузы", "Длинномеры"]
@@ -69,7 +69,7 @@ const TruckTypeSelector = ({ value, onChange }: TruckTypeSelectorProps) => {
       value: "20", 
       label: "Фура 20т", 
       price: "от 4500₽/час", 
-      image: "/img/2a538d0e-ff69-4af4-98fd-fe27dc465958.jpg",
+      image: "/img/2fb6652f-c8c9-4931-b99f-4fef826a3bf0.jpg",
       capacity: "до 20000 кг",
       dimensions: "13.6×2.45×2.7 м",
       features: ["Межгород", "Большие объемы", "Европаллеты"]
