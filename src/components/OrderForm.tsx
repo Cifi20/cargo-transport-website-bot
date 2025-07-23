@@ -22,6 +22,7 @@ const OrderForm = () => {
     phone: "",
     carType: "",
     loaders: "",
+    riggers: "",
     date: "",
     needHydroboard: "",
     needRokla: "",
@@ -97,6 +98,7 @@ const OrderForm = () => {
             phone: "",
             carType: "",
             loaders: "",
+            riggers: "",
             date: "",
             needHydroboard: "",
             needRokla: "",
@@ -135,6 +137,14 @@ const OrderForm = () => {
     { value: "2", label: "2 грузчика" },
     { value: "3", label: "3 грузчика" },
     { value: "4", label: "4 грузчика" }
+  ];
+
+  const riggersOptions = [
+    { value: "0", label: "Не требуются" },
+    { value: "1", label: "1 такелажник" },
+    { value: "2", label: "2 такелажника" },
+    { value: "3", label: "3 такелажника" },
+    { value: "4", label: "4 такелажника" }
   ];
 
   const yesNoOptions = [
@@ -254,18 +264,32 @@ const OrderForm = () => {
                     onChange={(value) => handleInputChange("carType", value)}
                   />
 
-                  {/* Грузчики */}
-                  <FormField
-                    id="loaders"
-                    label="Количество грузчиков"
-                    icon="Users"
-                    type="select"
-                    value={formData.loaders}
-                    onChange={(value) => handleInputChange("loaders", value)}
-                    placeholder="Выберите количество"
-                    options={loadersOptions}
-                    className="animate-fadeInUp"
-                  />
+                  {/* Грузчики и такелажники */}
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <FormField
+                      id="loaders"
+                      label="Количество грузчиков"
+                      icon="Users"
+                      type="select"
+                      value={formData.loaders}
+                      onChange={(value) => handleInputChange("loaders", value)}
+                      placeholder="Выберите количество"
+                      options={loadersOptions}
+                      className="animate-fadeInUp"
+                    />
+
+                    <FormField
+                      id="riggers"
+                      label="Количество такелажников"
+                      icon="Wrench"
+                      type="select"
+                      value={formData.riggers}
+                      onChange={(value) => handleInputChange("riggers", value)}
+                      placeholder="Выберите количество"
+                      options={riggersOptions}
+                      className="animate-fadeInUp"
+                    />
+                  </div>
 
                   {/* Дополнительные услуги */}
                   <div className="grid md:grid-cols-2 gap-6">

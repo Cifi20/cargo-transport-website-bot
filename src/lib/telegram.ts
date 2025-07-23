@@ -3,6 +3,7 @@ interface OrderData {
   phone: string;
   carType: string;
   loaders: string;
+  riggers: string;
   date: string;
   needHydroboard: string;
   needRokla: string;
@@ -37,6 +38,7 @@ export const sendToTelegram = async (
 *🚛 ТРАНСПОРТ:*
 • Тип автомобиля: ${getCarTypeName(orderData.carType)}
 • Грузчики: ${getLoadersText(orderData.loaders)}
+• Такелажники: ${getRiggersText(orderData.riggers)}
 • Гидроборт: ${orderData.needHydroboard === "yes" ? "Требуется" : "Не требуется"}
 • Рокла: ${orderData.needRokla === "yes" ? "Требуется" : "Не требуется"}
 
@@ -122,6 +124,12 @@ const getLoadersText = (value: string): string => {
   if (value === "0") return "Не требуются";
   if (value === "1") return "1 грузчик";
   return `${value} грузчика`;
+};
+
+const getRiggersText = (value: string): string => {
+  if (value === "0") return "Не требуются";
+  if (value === "1") return "1 такелажник";
+  return `${value} такелажника`;
 };
 
 const formatDate = (dateString: string): string => {
