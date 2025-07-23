@@ -244,25 +244,24 @@ const OrderForm = () => {
                     />
                   </div>
 
-                  {/* Транспорт и грузчики */}
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <TruckTypeSelector
-                      value={formData.carType}
-                      onChange={(value) => handleInputChange("carType", value)}
-                    />
+                  {/* Транспорт */}
+                  <TruckTypeSelector
+                    value={formData.carType}
+                    onChange={(value) => handleInputChange("carType", value)}
+                  />
 
-                    <FormField
-                      id="loaders"
-                      label="Количество грузчиков"
-                      icon="Users"
-                      type="select"
-                      value={formData.loaders}
-                      onChange={(value) => handleInputChange("loaders", value)}
-                      placeholder="Выберите количество"
-                      options={loadersOptions}
-                      className="animate-fadeInUp"
-                    />
-                  </div>
+                  {/* Грузчики */}
+                  <FormField
+                    id="loaders"
+                    label="Количество грузчиков"
+                    icon="Users"
+                    type="select"
+                    value={formData.loaders}
+                    onChange={(value) => handleInputChange("loaders", value)}
+                    placeholder="Выберите количество"
+                    options={loadersOptions}
+                    className="animate-fadeInUp"
+                  />
 
                   {/* Дополнительные услуги */}
                   <div className="grid md:grid-cols-2 gap-6">
