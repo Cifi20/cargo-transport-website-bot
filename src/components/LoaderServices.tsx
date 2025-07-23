@@ -11,7 +11,7 @@ const LoaderServices = () => {
       price: "800 ₽/час",
       minTime: "4 часа",
       note: "Погрузка/разгрузка, перемещение",
-      features: ["Быстрая работа", "Опыт 5+ лет", "Страховка"],
+      features: ["Быстрая работа", "Опыт 5+ лет", "Надежность"],
       color: "from-blue-500 to-blue-600"
     },
     {
@@ -157,8 +157,8 @@ const LoaderServices = () => {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">Страхование</h3>
-              <p className="text-muted-foreground">Полная страховка груза и работ</p>
+              <h3 className="text-xl font-bold text-foreground mb-2">Безопасность</h3>
+              <p className="text-muted-foreground">Безопасная работа с грузами</p>
             </div>
             
             <div className="group">
