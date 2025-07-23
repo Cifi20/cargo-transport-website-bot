@@ -3,7 +3,7 @@ import Icon from "@/components/ui/icon";
 import TransportTariffCard from "./PricingTariffs/TransportTariffCard";
 import ServiceCard from "./PricingTariffs/ServiceCard";
 import RegionTariffCard from "./PricingTariffs/RegionTariffCard";
-import SingleTariffView from "./PricingTariffs/SingleTariffView";
+
 import { 
   transportTariffs, 
   additionalServices, 
@@ -90,32 +90,7 @@ const PricingTariffs = () => {
           </div>
         )}
 
-        {/* Газель до 2т */}
-        {activeCategory === "gazel-2t" && (
-          <SingleTariffView
-            tariff={transportTariffs.filter(tariff => tariff.type.includes("1.5т"))[0]}
-            onOrder={scrollToOrderForm}
-            buttonText="Заказать Газель 1.5т"
-          />
-        )}
 
-        {/* Грузовик до 3т */}
-        {activeCategory === "truck-3t" && (
-          <SingleTariffView
-            tariff={transportTariffs.filter(tariff => tariff.type.includes("3т"))[0]}
-            onOrder={scrollToOrderForm}
-            buttonText="Заказать Грузовик 3т"
-          />
-        )}
-
-        {/* Грузовик до 5т */}
-        {activeCategory === "truck-5t" && (
-          <SingleTariffView
-            tariff={transportTariffs.filter(tariff => tariff.type.includes("5т"))[0]}
-            onOrder={scrollToOrderForm}
-            buttonText="Заказать Грузовик 5т"
-          />
-        )}
 
         {/* Дополнительные услуги */}
         {activeCategory === "services" && (

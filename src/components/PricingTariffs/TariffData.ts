@@ -138,9 +138,6 @@ export const regionTariffs = [
 
 export const categories = [
   { id: "transport", label: "Все авто", icon: "Truck" },
-  { id: "gazel-2t", label: "Газель 2т", icon: "Car" },
-  { id: "truck-3t", label: "Грузовик 3т", icon: "Truck" },
-  { id: "truck-5t", label: "Грузовик 5т", icon: "Truck" },
   { id: "services", label: "Услуги", icon: "Settings" },
   { id: "regions", label: "Межгород", icon: "MapPin" }
 ];
