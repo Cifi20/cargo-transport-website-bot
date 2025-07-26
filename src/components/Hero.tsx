@@ -1,4 +1,4 @@
-import { Truck, Clock, Shield, Star, CheckCircle, Users, Award } from "lucide-react";
+import { Truck, Clock, Shield, CheckCircle, Users, Award } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 const Hero = () => {
@@ -94,17 +94,7 @@ const Hero = () => {
           {/* Левая колонка - контент */}
           <div className={`space-y-8 ${isVisible ? 'animate-slideInLeft' : 'opacity-0 translate-x-[-100px]'}`}>
             
-            {/* Бейдж с рейтингом */}
-            <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-xl px-6 py-3 rounded-full text-sm font-medium border border-white/20 hover:bg-white/20 transition-all duration-500 hover:scale-105 group">
-              <div className="flex items-center gap-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-yellow-400 fill-current group-hover:scale-110 transition-transform duration-300" style={{animationDelay: `${i * 100}ms`}} />
-                ))}
-              </div>
-              <span className="text-white group-hover:text-accent transition-colors duration-300">
-                4.9/5 • 2500+ отзывов
-              </span>
-            </div>
+
             
             {/* Основной заголовок с анимацией */}
             <div className="space-y-6">
