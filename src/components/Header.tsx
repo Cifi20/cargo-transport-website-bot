@@ -60,11 +60,16 @@ const Header = () => {
               onClick={() => scrollToSection("#home")}
               className="flex items-center group"
             >
-              <img 
-                src="https://cdn.poehali.dev/files/1ab939bc-b836-4a5c-a703-6e1cf43f85f6.jpg"
-                alt="SMARTMOVE"
-                className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
-              />
+              <div className="flex flex-col items-start">
+                <img 
+                  src="https://cdn.poehali.dev/files/1ab939bc-b836-4a5c-a703-6e1cf43f85f6.jpg"
+                  alt="SMARTMOVE"
+                  className="h-12 w-auto transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                />
+                <div className="text-xs text-muted-foreground mt-1 font-medium group-hover:text-primary transition-colors duration-300">
+                  Мы приезжаем, когда другие обещают
+                </div>
+              </div>
             </button>
 
             {/* Навигация с эффектами */}
