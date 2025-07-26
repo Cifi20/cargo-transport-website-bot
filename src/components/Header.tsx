@@ -20,7 +20,6 @@ const Header = () => {
     { name: "Тарифы", href: "#tariffs" },
     { name: "Оставить заявку", href: "#order-form" },
     { name: "Отзывы", href: "#reviews" },
-    { name: "Контакты", href: "#contacts" },
   ];
 
   const scrollToSection = (href: string) => {
